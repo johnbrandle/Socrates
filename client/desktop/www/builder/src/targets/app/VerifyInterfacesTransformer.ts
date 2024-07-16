@@ -1,8 +1,6 @@
 /**
- * @license		UNLICENSED
- * @date		04.01.2023
- * @copyright   Untitled.io
- * @author      John Brandle
+ * @license     BSL 1.1 (subject to the terms defined in the project's LICENSE file)
+ * @copyright   (c) 2023, John Brandle
  */
 
 const path = require('path');

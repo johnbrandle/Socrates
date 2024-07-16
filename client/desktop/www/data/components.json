@@ -1,38 +1,38 @@
 {
     "library": {
         "components": {
-            "board": {
-                "Board": "library/components/board/Board",
-                "Tile": "library/components/board/Tile",
-                "fit": {
-                    "FitBoard": "library/components/board/fit/FitBoard"
-                },
-                "StorageTile": "library/components/board/StorageTile"
-            },
-            "Screen": "library/components/Screen",
             "debug": {
                 "info": {
                     "Info": "library/components/debug/info/Info"
                 },
-                "stats": {
-                    "Stats": "library/components/debug/stats/Stats"
+                "domtree": {
+                    "DOMTree": "library/components/debug/domtree/DOMTree"
                 },
                 "gcmonitor": {
                     "GCMonitor": "library/components/debug/gcmonitor/GCMonitor"
                 },
-                "domtree": {
-                    "DOMTree": "library/components/debug/domtree/DOMTree"
+                "stats": {
+                    "Stats": "library/components/debug/stats/Stats"
                 },
                 "console": {
                     "Console": "library/components/debug/console/Console"
                 }
             },
-            "slider": {
-                "HMultiSlider": "library/components/slider/HMultiSlider"
+            "Screen": "library/components/Screen",
+            "board": {
+                "Board": "library/components/board/Board",
+                "fit": {
+                    "FitBoard": "library/components/board/fit/FitBoard"
+                },
+                "StorageTile": "library/components/board/StorageTile",
+                "Tile": "library/components/board/Tile"
             },
             "scrollbar": {
                 "HScrollBar": "library/components/scrollbar/HScrollBar",
                 "VScrollBar": "library/components/scrollbar/VScrollBar"
+            },
+            "slider": {
+                "HMultiSlider": "library/components/slider/HMultiSlider"
             },
             "view": {
                 "TransientView": "library/components/view/TransientView",
@@ -42,6 +42,19 @@
         }
     },
     "app": {
+        "components": {
+            "modal": {
+                "ProgressModal": "app/components/modal/ProgressModal"
+            },
+            "file": {
+                "FileDragAndDrop": "app/components/file/FileDragAndDrop"
+            },
+            "notification": {
+                "BannerNotification": "app/components/notification/BannerNotification",
+                "BlurNotification": "app/components/notification/BlurNotification",
+                "ToastNotification": "app/components/notification/ToastNotification"
+            }
+        },
         "apps": {
             "appmanager": {
                 "AppManager": "app/apps/appmanager/AppManager"
@@ -49,41 +62,13 @@
             "contacts": {
                 "Contacts": "app/apps/contacts/Contacts"
             },
-            "filesandfolders": {
-                "FilesAndFolders": "app/apps/filesandfolders/FilesAndFolders",
+            "browser": {
+                "Browser": "app/apps/browser/Browser",
                 "views": {
-                    "grid": {
-                        "GridBoard": "app/apps/filesandfolders/views/grid/GridBoard",
-                        "GridView": "app/apps/filesandfolders/views/grid/GridView",
-                        "GridTile": "app/apps/filesandfolders/views/grid/GridTile"
-                    },
-                    "sidebar": {
-                        "SidebarBoard": "app/apps/filesandfolders/views/sidebar/SidebarBoard",
-                        "SidebarTile": "app/apps/filesandfolders/views/sidebar/SidebarTile",
-                        "SidebarView": "app/apps/filesandfolders/views/sidebar/SidebarView"
-                    },
-                    "row": {
-                        "RowView": "app/apps/filesandfolders/views/row/RowView",
-                        "RowBoard": "app/apps/filesandfolders/views/row/RowBoard",
-                        "RowTile": "app/apps/filesandfolders/views/row/RowTile"
-                    },
-                    "tree": {
-                        "TreeTile": "app/apps/filesandfolders/views/tree/TreeTile",
-                        "TreeView": "app/apps/filesandfolders/views/tree/TreeView",
-                        "TreeBoard": "app/apps/filesandfolders/views/tree/TreeBoard"
-                    }
-                }
-            },
-            "media": {
-                "Media": "app/apps/media/Media",
-                "views": {
-                    "grid": {
-                        "GridBoard": "app/apps/media/views/grid/GridBoard",
-                        "GridView": "app/apps/media/views/grid/GridView",
-                        "GridTile": "app/apps/media/views/grid/GridTile"
-                    },
-                    "preview": {
-                        "PreviewView": "app/apps/media/views/preview/PreviewView"
+                    "tab": {
+                        "TabBoard": "app/apps/browser/views/tab/TabBoard",
+                        "TabTile": "app/apps/browser/views/tab/TabTile",
+                        "TabView": "app/apps/browser/views/tab/TabView"
                     }
                 }
             },
@@ -92,15 +77,43 @@
                 "views": {
                     "grid": {
                         "GridBoard": "app/apps/documents/views/grid/GridBoard",
-                        "GridTile": "app/apps/documents/views/grid/GridTile",
-                        "GridView": "app/apps/documents/views/grid/GridView"
+                        "GridView": "app/apps/documents/views/grid/GridView",
+                        "GridTile": "app/apps/documents/views/grid/GridTile"
                     },
                     "pdf": {
                         "PDFBoard": "app/apps/documents/views/pdf/PDFBoard",
-                        "PDFView": "app/apps/documents/views/pdf/PDFView",
-                        "PDFTile": "app/apps/documents/views/pdf/PDFTile"
+                        "PDFTile": "app/apps/documents/views/pdf/PDFTile",
+                        "PDFView": "app/apps/documents/views/pdf/PDFView"
                     }
                 }
+            },
+            "filesandfolders": {
+                "FilesAndFolders": "app/apps/filesandfolders/FilesAndFolders",
+                "views": {
+                    "grid": {
+                        "GridBoard": "app/apps/filesandfolders/views/grid/GridBoard",
+                        "GridTile": "app/apps/filesandfolders/views/grid/GridTile",
+                        "GridView": "app/apps/filesandfolders/views/grid/GridView"
+                    },
+                    "row": {
+                        "RowBoard": "app/apps/filesandfolders/views/row/RowBoard",
+                        "RowTile": "app/apps/filesandfolders/views/row/RowTile",
+                        "RowView": "app/apps/filesandfolders/views/row/RowView"
+                    },
+                    "sidebar": {
+                        "SidebarBoard": "app/apps/filesandfolders/views/sidebar/SidebarBoard",
+                        "SidebarView": "app/apps/filesandfolders/views/sidebar/SidebarView",
+                        "SidebarTile": "app/apps/filesandfolders/views/sidebar/SidebarTile"
+                    },
+                    "tree": {
+                        "TreeBoard": "app/apps/filesandfolders/views/tree/TreeBoard",
+                        "TreeTile": "app/apps/filesandfolders/views/tree/TreeTile",
+                        "TreeView": "app/apps/filesandfolders/views/tree/TreeView"
+                    }
+                }
+            },
+            "terminal": {
+                "Terminal": "app/apps/terminal/Terminal"
             },
             "_planned": {
                 "share": {
@@ -110,104 +123,81 @@
                     "Chat": "app/apps/_planned/chat/Chat"
                 }
             },
-            "browser": {
-                "views": {
-                    "tab": {
-                        "TabTile": "app/apps/browser/views/tab/TabTile",
-                        "TabView": "app/apps/browser/views/tab/TabView",
-                        "TabBoard": "app/apps/browser/views/tab/TabBoard"
-                    }
-                },
-                "Browser": "app/apps/browser/Browser"
-            },
             "debug": {
+                "console": {
+                    "Console": "app/apps/debug/console/Console"
+                },
                 "domtree": {
                     "DOMTree": "app/apps/debug/domtree/DOMTree"
+                },
+                "gcmonitor": {
+                    "GCMonitor": "app/apps/debug/gcmonitor/GCMonitor"
                 },
                 "networkmonitor": {
                     "NetworkMonitor": "app/apps/debug/networkmonitor/NetworkMonitor"
                 },
                 "performancemonitor": {
                     "PerformanceMonitor": "app/apps/debug/performancemonitor/PerformanceMonitor"
-                },
-                "gcmonitor": {
-                    "GCMonitor": "app/apps/debug/gcmonitor/GCMonitor"
-                },
-                "console": {
-                    "Console": "app/apps/debug/console/Console"
                 }
-            },
-            "settings": {
-                "Settings": "app/apps/settings/Settings"
             },
             "wallet": {
                 "Wallet": "app/apps/wallet/Wallet"
             },
-            "terminal": {
-                "Terminal": "app/apps/terminal/Terminal"
-            }
-        },
-        "components": {
-            "file": {
-                "FileDragAndDrop": "app/components/file/FileDragAndDrop"
+            "settings": {
+                "Settings": "app/apps/settings/Settings"
             },
-            "modal": {
-                "ProgressModal": "app/components/modal/ProgressModal"
-            },
-            "notification": {
-                "BannerNotification": "app/components/notification/BannerNotification",
-                "BlurNotification": "app/components/notification/BlurNotification",
-                "ToastNotification": "app/components/notification/ToastNotification"
+            "media": {
+                "Media": "app/apps/media/Media",
+                "views": {
+                    "grid": {
+                        "GridTile": "app/apps/media/views/grid/GridTile",
+                        "GridView": "app/apps/media/views/grid/GridView",
+                        "GridBoard": "app/apps/media/views/grid/GridBoard"
+                    },
+                    "preview": {
+                        "PreviewView": "app/apps/media/views/preview/PreviewView"
+                    }
+                }
             }
         },
         "screens": {
-            "admin": {
-                "Index": "app/screens/admin/Index"
-            },
             "experiment": {
                 "Experiment": "app/screens/experiment/Experiment"
             },
+            "admin": {
+                "Index": "app/screens/admin/Index"
+            },
             "explorer": {
-                "Explorer": "app/screens/explorer/Explorer",
                 "appbar": {
                     "AppBar": "app/screens/explorer/appbar/AppBar"
+                },
+                "Explorer": "app/screens/explorer/Explorer",
+                "controlbar": {
+                    "ControlBar": "app/screens/explorer/controlbar/ControlBar"
                 },
                 "desktop": {
                     "DesktopTile": "app/screens/explorer/desktop/DesktopTile",
                     "Desktop": "app/screens/explorer/desktop/Desktop",
                     "DesktopTileable": "app/screens/explorer/desktop/DesktopTileable"
                 },
-                "controlbar": {
-                    "ControlBar": "app/screens/explorer/controlbar/ControlBar"
+                "window": {
+                    "Window": "app/screens/explorer/window/Window"
                 },
                 "background": {
                     "starlight": {
                         "Starlight": "app/screens/explorer/background/starlight/Starlight"
                     }
-                },
-                "window": {
-                    "Window": "app/screens/explorer/window/Window"
                 }
             },
             "gift": {
                 "views": {
-                    "CashView": "app/screens/gift/views/CashView",
-                    "PaymentOptionsView": "app/screens/gift/views/PaymentOptionsView"
+                    "PaymentOptionsView": "app/screens/gift/views/PaymentOptionsView",
+                    "CashView": "app/screens/gift/views/CashView"
                 },
                 "Gift": "app/screens/gift/Gift"
             },
             "home": {
                 "Home": "app/screens/home/Home"
-            },
-            "index": {
-                "Index": "app/screens/index/Index"
-            },
-            "login": {
-                "views": {
-                    "KeyView": "app/screens/login/views/KeyView",
-                    "TOTPView": "app/screens/login/views/TOTPView"
-                },
-                "Login": "app/screens/login/Login"
             },
             "register": {
                 "views": {
@@ -217,8 +207,18 @@
                 },
                 "Register": "app/screens/register/Register"
             },
+            "login": {
+                "views": {
+                    "TOTPView": "app/screens/login/views/TOTPView",
+                    "KeyView": "app/screens/login/views/KeyView"
+                },
+                "Login": "app/screens/login/Login"
+            },
             "settings": {
                 "Settings": "app/screens/settings/Settings"
+            },
+            "index": {
+                "Index": "app/screens/index/Index"
             }
         }
     }
