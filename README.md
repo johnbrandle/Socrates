@@ -21,4 +21,4 @@ Socrates is in Alpha, and therefore should only be used for development purposes
 Socrates currently allows only one user account per installation. In order to register a second time, "/Socrates" in your user directory will need to be cleared (append &clear to the url for the web version).
 
 ## License  
-Socrates is initially released under the Business Source License 1.1, which will transition to a more permissive license after a predefined period. See [LICENSE](LICENSE) for more details.
+Socrates is released under the Business Source License 1.1, which will transition to a more permissive license after a predefined period. See [LICENSE](LICENSE) for more details.
