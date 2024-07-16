@@ -1,0 +1,10 @@
+name = "wallet"
+main = "src/index.ts"
+compatibility_date = "2023-05-02"
+
+routes = 
+[
+	{ pattern = "badmonkeyinteractive.com/api/wallet/*", custom_domain = true }
+]
+
+vars.env = "prod"

@@ -1,0 +1,18 @@
+{
+    "exclude":["/node_modules/"],
+    "compilerOptions": 
+    {
+        "sourceMap": true,
+        "module": "CommonJS",
+        "lib": ["esnext"],
+        "target": "esnext",
+        "jsx": "react",
+        "strict": true,
+        "allowJs": false,
+        "resolveJsonModule": true,
+        "allowSyntheticDefaultImports":true,
+        "esModuleInterop":true,
+        "forceConsistentCasingInFileNames":true,
+        "verbatimModuleSyntax":false
+    }
+}

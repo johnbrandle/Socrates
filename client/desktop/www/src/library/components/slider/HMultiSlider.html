@@ -1,0 +1,70 @@
+<style type="text/scss">
+    &
+    {
+        width:100%; 
+        height:100%; 
+        position: relative; 
+    }
+
+    div[name="track"]
+    {
+        position:absolute; 
+        cursor:pointer;
+        height:8px;
+        width:100%;
+        margin-top:5px;
+        border-radius: 5px;
+        background-color: var(--bs-secondary-bg);
+    }
+
+    div[name="range"]
+    {
+        position:absolute; 
+        cursor:pointer;
+        height:8px;
+        margin-top:5px;
+        background-color: #007bff33;
+        pointer-events: none;
+    }
+
+    .thumb
+    {
+        position:absolute; 
+        cursor:pointer;
+        width:35px;
+        height:20px;
+        background-color: #007bff;
+        border-radius: 10px;
+    }
+
+    div[name="thumbLeft"]
+    {
+        left:0px;
+    }
+
+    div[name="thumbRight"]
+    {
+        right:0px;
+    }
+
+    .labels 
+    {
+        display: flex; /* Use flexbox */
+        justify-content: space-between; /* Align one label to the left, the other to the right */
+        margin-top: 5px; /* Adjust the margin-top to push the labels below the track */
+        position: relative;
+        width: 100%;
+    }
+</style>
+
+<div style="position:relative; width:100%; height:20px;">
+    <div name="track"></div>
+    <div name="range"></div>
+    <div name="thumbLeft" tabindex="1" class="thumb" title="Min"></div>
+    <div name="thumbRight" tabindex="2" class="thumb" title="Max"></div>
+</div>
+
+<div class="labels">
+    <div name="min">Min</div>
+    <div name="max">Max</div>
+</div>

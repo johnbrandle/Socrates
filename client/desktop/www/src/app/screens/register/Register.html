@@ -1,0 +1,142 @@
+<style type="text/scss">
+    .secret
+    {
+        font-family: Consolas, "Courier New", monospace;
+    }
+
+    .text-center 
+    {
+        text-align: center;
+    }
+    .input-group 
+    {
+        display: flex;
+        align-items: center;
+    }
+
+    /* input field */
+    .input-field 
+    {
+        letter-spacing: 0.75px;
+        text-align: left !important;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        height:42px;
+        cursor:text;
+        background-color: var(--bs-secondary-bg);
+    }
+
+    .input-field:focus 
+    {
+        outline: none;
+        box-shadow: none;
+        border: var(--bs-border-width) solid var(--bs-border-color);
+        border-right:none;
+    }
+
+    /* input field buttons */
+    .refresh-button 
+    {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        height:42px;
+    }
+
+    /* spin animation for refresh button */
+    @keyframes register-spin 
+    {
+        0% 
+        {
+            transform: rotate(0deg);
+        }
+        100% 
+        {
+            transform: rotate(360deg);
+        }
+    }
+
+    .spin-animation 
+    {
+        display: block;
+        animation: register-spin 0.5s linear;
+    }
+
+    /* options panel */
+    .options-button 
+    {
+        border: var(--bs-border-width) solid var(--bs-border-color);
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
+        background-color: var(--bs-secondary-bg);
+        height:42px;
+    }
+    .options-button:first-child:hover, .options-button:first-child:focus
+    {
+        border: var(--bs-border-width) solid var(--bs-border-color);  
+        border-radius: 0;
+        border-left: none;
+        border-right: none;       
+    }
+
+    .options-panel 
+    {
+        display: none;
+        position: absolute;
+        z-index: 10;
+        max-width: 270px;
+        background: var(--bs-tertiary-bg);
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 0.25rem 0.25rem;
+        padding: 1rem;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        right: 0;
+        top: 105%; /* Position the panel right below the button */    
+    }
+    .options-panel::before 
+    {
+        content: '';
+        position: absolute;
+        top: -5px;
+        right: 68px;
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-bottom: 5px solid var(--bs-secondary-bg);
+    }
+    .options-panel.open 
+    {
+        display: block;
+    }
+
+    /* clipboard, print and download buttons */
+    .custom-clipboard-button 
+    {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    .custom-print-button 
+    {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    .custom-download-button 
+    {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-left: none;
+    }
+
+    /* submit button */
+    .custom-submit-button 
+    {
+        width: 150px;
+    }
+</style>
+  
+<div data-component="library/components/view/Viewer" name="viewer" data-base>
+    <div data-component="./views/KeyView" name="keyView"></div>
+    <div data-component="./views/TOTPView" name="totpView"></div>
+    <div data-component="./views/LoginView" name="loginView"></div>
+</div>

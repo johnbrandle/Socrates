@@ -1,0 +1,52 @@
+<style type="text/scss">
+    /* positioning of the components */
+    
+    & 
+    {
+        width:100%;
+        height: 100vh !important;
+    }
+
+    .top-item 
+    {
+        flex-shrink: 0; /* Will grow to take up remaining space */
+    }
+
+    .middle-item 
+    {
+        flex-grow: 1; /* Will grow to take up remaining space */
+    }
+
+    .bottom-item 
+    {
+        flex-shrink: 0; /* Will not shrink below its content size */
+    }
+
+    .selectionSVG
+    {
+        position:absolute;
+        background-color: #ffffff44;
+        border:1px solid #ffffff22;
+    }
+
+    .background
+    {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+    }
+</style>
+
+<div name="background" class="background"></div>
+
+<div name="desktopArea" style="position:absolute; width:100%; height:100%; display:flex; flex-direction:column;">
+    <div data-component="./controlbar/ControlBar" name="controlBar" class="top-item"></div>
+    <div data-component="./desktop/Desktop" name="desktop" class="middle-item"></div>
+    <div data-component="./appbar/AppBar" name="appBar" class="bottom-item"></div>
+
+    <!-- tile selection svg -->
+    <svg name="selectionSVG" class="selectionSVG" width="0" height="0"></svg>
+</div>
+
+<div name="windowContainer" style="pointer-events:none; position:absolute; width:100%; height:100%;"></div>

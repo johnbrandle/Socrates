@@ -1,0 +1,97 @@
+<!doctype html>
+
+<!--
+/**
+ * @license     BSL 1.1 (subject to the terms defined in the project's LICENSE file)
+ * @copyright   (c) 2023, John Brandle
+ */
+-->
+
+<html lang="en" data-bs-theme="dark" style="height:100%;">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta id="f543910d-c297-4aed-84e6-1cf231badeef" http-equiv="Content-Security-Policy" content="
+        font-src 'self'; 
+        img-src 'self' data:;
+        worker-src 'self';
+        frame-src 'self';
+        manifest-src 'self';
+        base-uri 'self';
+        style-src-elem __STYLES_INTEGRITY__; 
+        script-src-elem __SCRIPTS_INTEGRITY__;
+        ">
+
+        <title>Socrates</title>
+        <link rel="manifest" href="/manifest.json?etag=${etag}"/> 
+
+        <base href="/">
+
+        <!-- inline script => things we need done right away -->
+        <script src="./js/inline.bundle.js"></script>
+ 
+        <!-- progress styles -->
+        <style src="./css/progress.min.css"></style>
+	</head>
+	<body>       
+        <webpack-templatestring src="./data/config.json" name="etag" value="global.etag"></webpack-templatestring>
+
+        <!-- window blur notification -->
+        <div data-component="app/components/notification/BlurNotification"></div>
+
+        <!-- display's component debug info. -->
+        <div data-component="library/components/debug/info/Info" name="info"></div>
+
+        <!-- display's fps, etc. -->
+        <div data-component="library/components/debug/stats/Stats"></div>
+
+        <!-- toast notifications -->
+        <div data-component="app/components/notification/ToastNotification" name="toastNotification" aria-live="polite" aria-atomic="true" style="position:fixed; top:1rem; right:1rem; z-index:10000;"></div>
+        
+        <!-- banner notifications -->
+        <div data-component="app/components/notification/BannerNotification" name="bannerNotification" style="position:absolute; z-index:9999"></div>
+        
+        <!-- progress modal -->
+        <div data-component="app/components/modal/ProgressModal" name="progressModal"></div>
+        
+        <!-- progress script and associated div -->
+        <div id="c4649e0d-4698-4739-bb32-3a308c5b2526" style="position:absolute; width:100%; height:100%; z-index:-1;" data-treeview='{"skip":"true"}'></div>
+        <script src="./js/progress.bundle.js" data-progress-id-ref="c4649e0d-4698-4739-bb32-3a308c5b2526"></script>
+
+        <!-- root viewer -->
+        <div data-component="library/components/view/Viewer" name="rootViewer" data-noload data-route="" data-router data-transition="new transition:Transition()" data-effect="new effect:None()" data-duration="0">
+            
+            <!-- index screen -->
+            <div data-component="app/screens/index/Index" name="indexScreen" data-route="/"></div>
+
+            <!-- login screen -->
+            <div data-component="app/screens/login/Login" name="loginScreen" data-route="/login"></div>
+
+            <!-- register screen -->
+            <div data-component="app/screens/register/Register" name="registerScreen" data-route="/register"></div>
+
+            <!-- gift screen --> 
+            <div data-component="app/screens/gift/Gift" name="giftScreen" data-route="/gift"></div>
+
+            <!-- explorer screen --> 
+            <div data-component="app/screens/explorer/Explorer" name="explorerScreen" data-route="/explorer"></div>
+
+            <!-- settings screen -->
+            <div data-component="app/screens/settings/Settings" name="settingsScreen" data-route="/settings"></div>
+
+            <!-- admin screens -->
+            <div data-component="library/components/view/Viewer" name="adminViewer" data-route="/admin" data-router>
+                
+                <!-- admin index screen -->
+                <div data-component="app/screens/admin/Index" name="adminIndexScreen" data-route="/admin/"></div>
+
+                <div data-component="app/screens/admin/Index" name="adminIndexScreen2" data-route="/admin/foo2"></div>
+            </div>
+
+            <!-- experiment screen -->
+            <div data-component="app/screens/experiment/Experiment" name="experimentScreen" data-route="/experiment"></div>
+        </div>
+
+        <!-- loader script -->
+        <script src="./js/loader.bundle.js"></script>
+	</body>
+</html>

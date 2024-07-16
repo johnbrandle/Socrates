@@ -1,0 +1,197 @@
+html
+{
+    height:100%;
+    width:100%;
+}
+
+body 
+{
+    overflow: hidden;
+    margin: 0;
+    min-width: 100%;
+    min-height: 100%;
+
+    /*
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    */
+}
+
+/* add this class the body element to disable selection while dragging */
+.no-user-select
+{
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Safari */
+    -moz-user-select: none;      /* Old versions of Firefox */
+    -ms-user-select: none;       /* Internet Explorer/Edge */
+    user-select: none; 
+}
+
+/* set mouse cursor type for interactive ui elements */
+.btn, input[type="checkbox"], input[type="range"]
+{
+    cursor: pointer !important;
+}
+
+/* adjust the size of the thumb in the slider input component */
+input[type="range"]::-webkit-slider-thumb 
+{
+    width: 35px;
+    height: 20px;
+    margin-top: -5px; /* Adjust margin to vertically align the thumb */
+    border-radius: 10px;
+    background: #007bff;
+} 
+input[type="range"]::-moz-range-thumb 
+{
+    width: 35px;
+    height: 20px;
+    border-radius: 10px;
+    background: #007bff;
+}
+input[type="range"]::-ms-thumb 
+{
+    width: 35px;
+    height: 20px;
+    border-radius: 10px;
+    background: #007bff;
+}
+
+/* info tooltip */
+.info 
+{
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+.info .bi-info-circle
+{
+    vertical-align: text-top;
+}
+.tooltip 
+{
+    font-size: 12px;
+    visibility: hidden;
+    width: auto; /* Width will adjust automatically */
+    max-width: 250px; /* Optional: Set a maximum width if needed */
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 6px;
+    position: absolute;
+    z-index: 100;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%); /* Centering the tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.tooltip::after 
+{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+} 
+.tooltip-below 
+{
+    bottom: auto; /* Reset the bottom positioning */
+    top: 125%; /* Position the tooltip below the element */
+}
+  
+.tooltip-below::after 
+{
+    top: auto; /* Reset the top positioning */
+    bottom: 100%; /* Position the arrow at the bottom of the tooltip */
+    border-color: transparent transparent #555 transparent; /* Change the arrow direction */
+}
+.info:hover .tooltip 
+{
+    visibility: visible;
+    opacity: 1;
+}
+
+/* modal */
+.modal-dialog 
+{
+    top: 10%; /* Adjust this value to change the position of the modal */
+}
+
+/* debug mode styling */
+.debug
+{
+    border-style: solid !important;
+    border-width: 1px !important;
+    border-color: plum !important;
+}
+
+/* component styles */
+.component-content 
+{
+    width:100%;
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    /*
+    width:100%;
+    margin:75px auto auto auto;
+    max-width:650px;
+    display: grid;
+    align-content: start; 
+    height:100vh;
+    padding:10px;
+    grid-template-rows: 1fr 2fr 3fr;*/ /* This will divide the container into four parts */
+}
+
+.component-content::before 
+{
+    content: '';
+    flex-grow: 1; /* This value controls the vertical position */
+}
+
+.component-content::after 
+{
+    content: '';
+    flex-grow: 2; /* This value controls the vertical position */
+}
+
+.component-content > :first-child 
+{
+    width:100%;
+    max-width: 650px;
+  
+    /*
+    width: 100%;
+    grid-row: 2;*/ /* This will position the child in the 2nd fourth part */
+    /*align-self: top;*/ /* Center the child vertically in its grid cell */
+}
+
+/* tile */
+
+.tile-background-pulse 
+{
+    background-color: #e0e0e0; /* Adjust as needed */
+    animation: tile-pulse 1.25s infinite alternate;
+    width:100%;
+    height:100%;
+    opacity: .05;
+}
+
+@keyframes tile-pulse 
+{
+    from 
+    {
+        opacity: .05;
+    }
+    to 
+    {
+        opacity: 0;
+    }
+}

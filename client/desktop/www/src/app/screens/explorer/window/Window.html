@@ -1,0 +1,189 @@
+<style type="text/scss">
+    & /*this is the parent of window-container, or "element" in the associated class (due to a compilation script) */
+    { 
+        position: absolute;
+        z-index: 5000;
+        left: 0px;
+        top: 0px;
+        color: #fff;
+        border-radius: 5px;
+        overflow: hidden;
+        user-select: none;
+        -webkit-user-select: none; /* Safari */
+        outline: #eeeeee22 solid 1px;
+        pointer-events: auto;
+    }
+
+    .window-container 
+    {
+        display: flex; 
+        flex-direction: column; 
+        height: 100%;
+
+        .window-header.focused
+        {
+            background-color: #333333ff;
+        }
+
+        .window-header 
+        {
+            position: relative;
+            padding: 5px;
+            padding-bottom: 7px;
+            font-weight: bold;
+            background-color: #33333399;
+            border-radius: 5px 5px 0 0;
+            user-select: none;
+            cursor: pointer;
+            display: flex;
+            min-width: 350px;
+
+            .button-container 
+            {
+                display: flex;
+                align-items: center;
+                width: 0px; /* Initially hidden */
+                overflow: hidden;
+            }
+
+            .close-button,
+            .minimize-button,
+            .maximize-button 
+            {
+                width: 15px;
+                height: 15px;
+                cursor: pointer;
+                border-radius: 50%;
+                margin-right: 7px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 14px;
+                line-height: 14px;
+                font-weight: 500;
+
+                color: transparent; 
+                transition: color 0.3s ease; 
+            }
+
+            .close-button 
+            {
+                background-color: rgb(180, 31, 106);
+                margin-left: 5px;
+                margin-right:11px;
+            }
+
+            .minimize-button
+            {
+                background-color: yellow;
+            }
+
+            .maximize-button
+            {
+                background-color: orange;
+            }
+
+            .title 
+            {
+                text-align: center;
+                position: absolute;
+                display: inline-block;
+                width: 100%;
+                top: 0px;
+                pointer-events: none;
+            }
+
+            .title-maximized
+            {
+                margin-left: 12px;
+            }
+        }
+
+        .window-header:hover
+        {
+            .close-button, .minimize-button, .maximize-button
+            {
+                color: #333333aa;
+            }
+        }
+
+        .window-content 
+        {
+            overflow: auto; /* Show scrollbars when necessary */
+            padding: 0px;
+            box-sizing: border-box; /* Include padding and border in the element's total width and height */
+            user-select: none;
+            background-color: #222;
+            flex-grow: 1;
+        }
+
+        .resize-handle 
+        {
+            position: absolute;
+            background-color: transparent;
+            z-index: 5001;
+        }
+
+        .resize-handle.top,
+        .resize-handle.bottom 
+        {
+            width: 100%;
+            height: 5px;
+        }
+
+        .resize-handle.left,
+        .resize-handle.right 
+        {
+            height: 100%;
+            width: 5px;
+            top:0px;
+        }
+
+        .resize-handle.top-left,
+        .resize-handle.top-right,
+        .resize-handle.bottom-left,
+        .resize-handle.bottom-right 
+        {
+            width: 5px;
+            height: 5px;
+        }
+
+        .resize-handle.top { top: 0; cursor: ns-resize; }
+        .resize-handle.right { right: 0; cursor: ew-resize; }
+        .resize-handle.bottom { bottom: 0; cursor: ns-resize; }
+        .resize-handle.left { left: 0; cursor: ew-resize; }
+        .resize-handle.top-left { top: 0; left: 0; cursor: nwse-resize; }
+        .resize-handle.top-right { top: 0; right: 0; cursor: nesw-resize; }
+        .resize-handle.bottom-left { bottom: 0; left: 0; cursor: nesw-resize; }
+        .resize-handle.bottom-right { bottom: 0; right: 0; cursor: nwse-resize; }
+
+        .sticky-top { box-shadow: inset 0 3px 0 0 #eeeeee22; }
+        .sticky-bottom { box-shadow: inset 0 -3px 0 0 #eeeeee22; }
+        .sticky-left { box-shadow: inset 3px 0 0 0 #eeeeee22; }
+        .sticky-right { box-shadow: inset -3px 0 0 0 #eeeeee22; }
+    }
+</style>
+
+<div name="windowContainer" class="window-container">
+    <div name="windowHeader" class="window-header">
+        <div name="buttonContainer" class="button-container"> <!-- Button container -->
+            <div name="closeButton" class="close-button" title="Close"></div> <!-- Close button -->
+            <div name="minimizeButton" class="minimize-button" title="Minimize">-</div> <!-- minimize button -->
+            <div name="maximizeButton" class="maximize-button" title="Maximize">+</div> <!-- Maximize button -->
+        </div>
+        <span name="windowTitle" class="title">Window</span>
+    </div>
+    <div name="windowContent" class="window-content"></div>
+
+    <!-- Handles for resizing -->
+    <div name="resizeHandles" class="resize-handle top"></div>
+    <div name="resizeHandles" class="resize-handle right"></div>
+    <div name="resizeHandles" class="resize-handle bottom"></div>
+    <div name="resizeHandles" class="resize-handle left"></div>
+
+    <!-- Corner handles -->
+    <div name="resizeHandles" class="resize-handle top-left"></div>
+    <div name="resizeHandles" class="resize-handle top-right"></div>
+    <div name="resizeHandles" class="resize-handle bottom-left"></div>
+    <div name="resizeHandles" class="resize-handle bottom-right"></div>
+</div>

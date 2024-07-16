@@ -1,0 +1,24 @@
+local:
+  auth:
+    enabled: false
+    username: foo
+    password: bar
+  port: 80
+  cert: ''
+  key: ''
+  rootPath: /Users/john/Git/socrates/client/www/
+  currentEtag: 1234567890
+  upgradeEtag: 1234567890 #etag we want to upgrade to after minute offset
+  upgradeMinuteOffset: 15 #start serving the latest etag after 15 minutes
+remote:
+  auth:
+    enabled: false
+    username: 1234567890-=
+    password: qwertyuiop[]
+  port: 80
+  cert: /run/secrets/remote-cert
+  key: /run/secrets/remote-privkey
+  rootPath: /www/
+  currentEtag: 1689176665
+  upgradeEtag: 1689176699 #etag we want to upgrade to after minute offset
+  upgradeMinuteOffset: 15 #start serving the latest etag after 15 minutes

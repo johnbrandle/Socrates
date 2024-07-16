@@ -1,0 +1,29 @@
+<div class="component-content">
+    <div>
+        <form>
+            <!-- intro text -->
+            
+            <p class="text-center">Only one more thing! Please enter your <a name="helpLink" href="">authentication code</a> below.</p>
+
+            <!-- vertical spacing between elements -->
+            <div style="margin-top: 35px;"></div>
+
+            <div class="row justify-content-center"> 
+                <!-- totp field -->
+                <div class="mb-3 col-md-3" style="width:145px !important;">
+                    <input type="password" name="totpTextField" class="form-control text-center" autocomplete="one-time-code" placeholder="0000 0000" pattern="^\d{6}\s?$" required maxlength="9">
+                </div>
+            </div>
+
+            <!-- vertical spacing between elements -->
+            <div style="margin-top: 45px;"></div>
+
+            <!-- register button -->
+            <div class="row justify-content-center">
+                <div class="d-grid justify-content-center mb-3">
+                    <button class="btn btn-primary custom-login-button" disabled type="button" name="loginButton">Login</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

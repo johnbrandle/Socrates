@@ -1,0 +1,1 @@
+if (window.history !== undefined && window.history.replaceState !== undefined) window.history.replaceState({}, null, '../../index.html');

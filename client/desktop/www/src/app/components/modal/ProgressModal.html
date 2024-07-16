@@ -1,0 +1,42 @@
+<style type="text/scss">
+    .details
+    {
+        font-size: 0.8rem;
+    }
+
+    .progress-bar
+    {
+        width:0%;
+    }
+
+    .button
+    {
+        display: none; 
+        margin-top: 10px;
+    }
+</style>
+
+<div class="modal" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" name="modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" name="title"></h5>
+            </div>
+            <div class="modal-body">
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" name="progressBar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <p class="mt-3" name="status"></p>
+                <details class="mt-3" name="details">
+                    <summary class="details">Details</summary>
+                    <textarea class="form-control" rows="5" readonly name="detailsTextArea"></textarea>
+                </details>
+
+                <div class="d-flex justify-content-center mt-2">
+                    <button type="button" class="btn btn-primary button" name="cancelButton">Cancel</button>
+                    <button type="button" class="btn btn-primary button" name="continueButton">Continue</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

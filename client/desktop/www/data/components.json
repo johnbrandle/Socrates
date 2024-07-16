@@ -1,0 +1,225 @@
+{
+    "library": {
+        "components": {
+            "board": {
+                "Board": "library/components/board/Board",
+                "Tile": "library/components/board/Tile",
+                "fit": {
+                    "FitBoard": "library/components/board/fit/FitBoard"
+                },
+                "StorageTile": "library/components/board/StorageTile"
+            },
+            "Screen": "library/components/Screen",
+            "debug": {
+                "info": {
+                    "Info": "library/components/debug/info/Info"
+                },
+                "stats": {
+                    "Stats": "library/components/debug/stats/Stats"
+                },
+                "gcmonitor": {
+                    "GCMonitor": "library/components/debug/gcmonitor/GCMonitor"
+                },
+                "domtree": {
+                    "DOMTree": "library/components/debug/domtree/DOMTree"
+                },
+                "console": {
+                    "Console": "library/components/debug/console/Console"
+                }
+            },
+            "slider": {
+                "HMultiSlider": "library/components/slider/HMultiSlider"
+            },
+            "scrollbar": {
+                "HScrollBar": "library/components/scrollbar/HScrollBar",
+                "VScrollBar": "library/components/scrollbar/VScrollBar"
+            },
+            "view": {
+                "TransientView": "library/components/view/TransientView",
+                "Viewer": "library/components/view/Viewer",
+                "View": "library/components/view/View"
+            }
+        }
+    },
+    "app": {
+        "apps": {
+            "appmanager": {
+                "AppManager": "app/apps/appmanager/AppManager"
+            },
+            "contacts": {
+                "Contacts": "app/apps/contacts/Contacts"
+            },
+            "filesandfolders": {
+                "FilesAndFolders": "app/apps/filesandfolders/FilesAndFolders",
+                "views": {
+                    "grid": {
+                        "GridBoard": "app/apps/filesandfolders/views/grid/GridBoard",
+                        "GridView": "app/apps/filesandfolders/views/grid/GridView",
+                        "GridTile": "app/apps/filesandfolders/views/grid/GridTile"
+                    },
+                    "sidebar": {
+                        "SidebarBoard": "app/apps/filesandfolders/views/sidebar/SidebarBoard",
+                        "SidebarTile": "app/apps/filesandfolders/views/sidebar/SidebarTile",
+                        "SidebarView": "app/apps/filesandfolders/views/sidebar/SidebarView"
+                    },
+                    "row": {
+                        "RowView": "app/apps/filesandfolders/views/row/RowView",
+                        "RowBoard": "app/apps/filesandfolders/views/row/RowBoard",
+                        "RowTile": "app/apps/filesandfolders/views/row/RowTile"
+                    },
+                    "tree": {
+                        "TreeTile": "app/apps/filesandfolders/views/tree/TreeTile",
+                        "TreeView": "app/apps/filesandfolders/views/tree/TreeView",
+                        "TreeBoard": "app/apps/filesandfolders/views/tree/TreeBoard"
+                    }
+                }
+            },
+            "media": {
+                "Media": "app/apps/media/Media",
+                "views": {
+                    "grid": {
+                        "GridBoard": "app/apps/media/views/grid/GridBoard",
+                        "GridView": "app/apps/media/views/grid/GridView",
+                        "GridTile": "app/apps/media/views/grid/GridTile"
+                    },
+                    "preview": {
+                        "PreviewView": "app/apps/media/views/preview/PreviewView"
+                    }
+                }
+            },
+            "documents": {
+                "Documents": "app/apps/documents/Documents",
+                "views": {
+                    "grid": {
+                        "GridBoard": "app/apps/documents/views/grid/GridBoard",
+                        "GridTile": "app/apps/documents/views/grid/GridTile",
+                        "GridView": "app/apps/documents/views/grid/GridView"
+                    },
+                    "pdf": {
+                        "PDFBoard": "app/apps/documents/views/pdf/PDFBoard",
+                        "PDFView": "app/apps/documents/views/pdf/PDFView",
+                        "PDFTile": "app/apps/documents/views/pdf/PDFTile"
+                    }
+                }
+            },
+            "_planned": {
+                "share": {
+                    "Share": "app/apps/_planned/share/Share"
+                },
+                "chat": {
+                    "Chat": "app/apps/_planned/chat/Chat"
+                }
+            },
+            "browser": {
+                "views": {
+                    "tab": {
+                        "TabTile": "app/apps/browser/views/tab/TabTile",
+                        "TabView": "app/apps/browser/views/tab/TabView",
+                        "TabBoard": "app/apps/browser/views/tab/TabBoard"
+                    }
+                },
+                "Browser": "app/apps/browser/Browser"
+            },
+            "debug": {
+                "domtree": {
+                    "DOMTree": "app/apps/debug/domtree/DOMTree"
+                },
+                "networkmonitor": {
+                    "NetworkMonitor": "app/apps/debug/networkmonitor/NetworkMonitor"
+                },
+                "performancemonitor": {
+                    "PerformanceMonitor": "app/apps/debug/performancemonitor/PerformanceMonitor"
+                },
+                "gcmonitor": {
+                    "GCMonitor": "app/apps/debug/gcmonitor/GCMonitor"
+                },
+                "console": {
+                    "Console": "app/apps/debug/console/Console"
+                }
+            },
+            "settings": {
+                "Settings": "app/apps/settings/Settings"
+            },
+            "wallet": {
+                "Wallet": "app/apps/wallet/Wallet"
+            },
+            "terminal": {
+                "Terminal": "app/apps/terminal/Terminal"
+            }
+        },
+        "components": {
+            "file": {
+                "FileDragAndDrop": "app/components/file/FileDragAndDrop"
+            },
+            "modal": {
+                "ProgressModal": "app/components/modal/ProgressModal"
+            },
+            "notification": {
+                "BannerNotification": "app/components/notification/BannerNotification",
+                "BlurNotification": "app/components/notification/BlurNotification",
+                "ToastNotification": "app/components/notification/ToastNotification"
+            }
+        },
+        "screens": {
+            "admin": {
+                "Index": "app/screens/admin/Index"
+            },
+            "experiment": {
+                "Experiment": "app/screens/experiment/Experiment"
+            },
+            "explorer": {
+                "Explorer": "app/screens/explorer/Explorer",
+                "appbar": {
+                    "AppBar": "app/screens/explorer/appbar/AppBar"
+                },
+                "desktop": {
+                    "DesktopTile": "app/screens/explorer/desktop/DesktopTile",
+                    "Desktop": "app/screens/explorer/desktop/Desktop",
+                    "DesktopTileable": "app/screens/explorer/desktop/DesktopTileable"
+                },
+                "controlbar": {
+                    "ControlBar": "app/screens/explorer/controlbar/ControlBar"
+                },
+                "background": {
+                    "starlight": {
+                        "Starlight": "app/screens/explorer/background/starlight/Starlight"
+                    }
+                },
+                "window": {
+                    "Window": "app/screens/explorer/window/Window"
+                }
+            },
+            "gift": {
+                "views": {
+                    "CashView": "app/screens/gift/views/CashView",
+                    "PaymentOptionsView": "app/screens/gift/views/PaymentOptionsView"
+                },
+                "Gift": "app/screens/gift/Gift"
+            },
+            "home": {
+                "Home": "app/screens/home/Home"
+            },
+            "index": {
+                "Index": "app/screens/index/Index"
+            },
+            "login": {
+                "views": {
+                    "KeyView": "app/screens/login/views/KeyView",
+                    "TOTPView": "app/screens/login/views/TOTPView"
+                },
+                "Login": "app/screens/login/Login"
+            },
+            "register": {
+                "views": {
+                    "KeyView": "app/screens/register/views/KeyView",
+                    "LoginView": "app/screens/register/views/LoginView",
+                    "TOTPView": "app/screens/register/views/TOTPView"
+                },
+                "Register": "app/screens/register/Register"
+            },
+            "settings": {
+                "Settings": "app/screens/settings/Settings"
+            }
+        }
+    }
+}

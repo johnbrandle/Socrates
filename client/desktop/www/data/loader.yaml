@@ -1,0 +1,37 @@
+
+  app: "./js/app.bundle.js" #app js
+  styles:
+  - src: "./css/thirdparty/bootstrap_icons/fonts/bootstrap-icons.woff2.min.css" #global ui styling https://getbootstrap.com/ (fonts) the woff2 file converted to base64 css
+    integrity: ""
+    cache: true
+  - src: "./css/thirdparty/bootstrap.bundle.min.css" #global ui styling https://getbootstrap.com/
+    integrity: ""
+    cache: true
+  - src: "./css/thirdparty/bootstrap_icons/bootstrap-icons.min.css" #global ui styling https://getbootstrap.com/ (fonts)
+    integrity: ""
+    cache: true
+  - src: "./css/app.min.css" #app css
+    integrity: ""
+    cache: true
+  scripts:
+  - src: "./js/thirdparty/bootstrap/bootstrap.bundle.min.js" #global ui styling https://getbootstrap.com/
+    integrity: ""
+    cache: true
+#  - src: "./js/thirdparty/hammer.min.js" #multi-touch support https://hammerjs.github.io/ (not currently in use)
+#    integrity: ""
+#    cache: true
+#  - src: "./js/thirdparty/peerjs.min.js" #peer2peer functionality https://peerjs.com/ (not currently in use)
+#    integrity: ""
+#    cache: true
+#  - src: "./js/thirdparty/popper.min.js" #tooltips and popovers https://popper.js.org/ (not currently in use)
+#    integrity: ""
+#    cache: true
+  - src: "./js/thirdparty/hash-wasm/sha256.umd.min.js" #hashing https://www.npmjs.com/package/hash-wasm
+    integrity: ""
+    cache: true
+  #- src: "./js/thirdparty/mp4box@0.5.2.all.min.js" #mp4box.js https://www.npmjs.com/package/mp4box (not currently using)
+  #  integrity: ""
+  #  cache: true
+  #- src: "./js/thirdparty/ffprobe_wasm/ffprobe-wasm.js" #ffprobe.wasm browser based video transcoding //https://github.com/crazoter/ffprobe-wasm
+  #  integrity: ""
+  #  cache: true

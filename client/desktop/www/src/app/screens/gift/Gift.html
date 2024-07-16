@@ -1,0 +1,36 @@
+<style type="text/scss">
+    .container-card 
+    {
+        padding: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-bottom: 1rem;
+        transition: box-shadow 0.3s ease-in-out;
+    }
+    .container-card:hover 
+    {
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .container-card.selected 
+    {
+        box-shadow: 0 0 0 2px #007bff;
+        border-color: #007bff;
+    }
+
+    .container-icon 
+    {
+        font-size: 64px;
+        margin-bottom: 1rem;
+    }
+
+    /* submit button */
+    .button 
+    {
+        width: 150px;
+    }
+</style>
+
+<div data-component="library/components/view/Viewer" name="viewer" data-base>
+    <div data-component="./views/PaymentOptionsView" name="paymentOptionsView"></div>
+    <div data-component="./views/CashView" name="cashView"></div>
+</div>

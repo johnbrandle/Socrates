@@ -1,0 +1,15 @@
+[
+    "node_modules",
+    "src",
+    "builder",
+    "_.command",
+    "_.bat",
+    ".exclude.json",
+    ".gitignore",
+    "index.template.html",
+    "package-lock.json",
+    "package.json",
+    "README.md",
+    "tsconfig.json",
+    "www.d.ts"
+]

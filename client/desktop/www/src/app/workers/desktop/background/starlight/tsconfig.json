@@ -1,0 +1,23 @@
+{
+    "include":["../../../www.d.ts", "../../../../shared/shared.d.ts"],
+    "files":["Main.ts"],
+    "compilerOptions": 
+    {
+        "sourceMap": true,
+        "module": "esnext",
+        "lib": ["esnext", "WebWorker"],
+        "target": "esnext",
+        "jsx": "react",
+        "strict": true,
+        "allowJs": false,
+        "moduleResolution": "bundler",
+        "resolveJsonModule": true,
+        "allowSyntheticDefaultImports":true,
+        "esModuleInterop":false,
+        "forceConsistentCasingInFileNames":true,
+        "verbatimModuleSyntax":true,
+        "noEmit": true,
+        "allowImportingTsExtensions":true,
+        "experimentalDecorators": true,
+    }
+}

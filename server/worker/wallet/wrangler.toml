@@ -1,0 +1,22 @@
+name = "wallet"
+main = "src/index.ts"
+compatibility_date = "2023-05-02"
+
+route = "localhost/api/wallet/*"
+
+vars.environment = "dev"
+vars.proxyEnabled = true
+
+vars.proxyKeyHeaderName = "xy-proxy-key"
+vars.proxyPassedHeaderName = "xy-proxy-passed"
+vars.serviceKeyHeaderName = "xy-service-key"
+vars.adminKeyHeaderName = "xy-admin-wallet-key"
+
+#THE FOLLOWING KEYS MUST BE UNIQUE AND SECURE
+vars.proxyKey = "UUID" 
+vars.serviceKey = "UUID"
+vars.adminKey = "UUID"
+
+d1_databases = [
+  { binding = "walletDB", database_name = "walletDB", database_id = "<UUID>" }
+]

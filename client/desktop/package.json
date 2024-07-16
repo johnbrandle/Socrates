@@ -1,0 +1,35 @@
+{
+  "name": "socrates",
+  "version": "1.0.0",
+  "description": "",
+  "main": "js/main.bundle.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack --config webpack.config.dev.js",
+    "electron-dev": "electron . --contentPath=../www",
+    "electron-dev-log": "electron . --enable-logging --inspect --contentPath=../www"
+  },
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "browserlist": "last 2 versions",
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/mime-types": "^2.1.4",
+    "chokidar": "^3.6.0",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.4.2",
+    "webpack": "^5.90.3",
+    "webpack-cli": "^5.1.4",
+    "webpack-compiler-plugin": "^1.1.5"
+  },
+  "dependencies": {
+    "conf": "^12.0.0",
+    "electron": "^29.1.4",
+    "fs-extra": "^11.2.0",
+    "mime-types": "^2.1.35",
+    "node-fetch": "^3.3.2"
+  }
+}

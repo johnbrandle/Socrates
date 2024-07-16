@@ -1,0 +1,17 @@
+{
+    "tasks": 
+    {
+        "dev": "deno $(deno run --allow-all ./build.ts dev run) ./config.json",
+        "dev-bin": "deno $(deno run --allow-all ./build.ts dev compile mac)",
+        "prod-bin":"deno $(deno run --allow-all ./build.ts prod compile linux)",
+        "cert": "openssl req -x509 -newkey rsa:4096 -keyout ./_out/cert/localhost-privkey.pem -out ./_out/cert/localhost-cert.pem -days 365 -nodes -subj '/CN=localhost'"
+    },
+    "lint": 
+    {
+        "include":["src/"],
+        "rules": 
+        {
+            "exclude": ["no-case-declarations"]
+        }
+    }
+}

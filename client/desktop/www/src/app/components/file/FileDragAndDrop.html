@@ -1,0 +1,135 @@
+<style>
+    .drop-zone
+    {
+        outline: #cccccc33; 
+        outline-style: solid; 
+        outline-width: 1px; 
+        background-color: #00000033;
+    }
+
+    .drop-area 
+    {
+        position: relative;
+        width: 100%;
+        min-height: 300px;
+        max-height: 300px;
+        /*outline: 1px solid #cccccc33;*/
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0px;
+        padding: 10px;
+        overflow-y: auto;
+        user-select: none;
+    }
+    
+    .file, .folder {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 75px;
+        text-align: center;
+        user-select: none;
+        height:fit-content;
+        pointer-events:all;
+    }
+    
+    .folder i
+    {
+        cursor: pointer;
+    }
+    
+    .file img, .folder img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .file button, .folder button {
+        position: absolute;
+        top: -7px;
+        left: -2px;
+        background-color: transparent;
+        border: none;
+        font-size: 12px;
+    }
+    
+    .back
+    {
+        background-color: transparent;
+        border: none;
+        color:#ccc;
+        
+    }
+    
+    .back .first
+    {
+        display: inline-block;
+        font-size: 20px;
+        transform: scaleY(-1);
+    }
+    
+    .back .second
+    {
+        vertical-align: text-top;
+        font-size: 12px;
+    }
+    
+    .back:hover
+    {
+        color: red;
+    }
+    
+    .file i, .folder i {
+        font-size: 30px;
+        margin-bottom: 5px;
+    }
+    
+    .file span, .folder span {
+        font-size: 12px;
+    }
+    
+    .file .delete i:hover, .folder .delete i:hover
+    {
+        color: red;
+    }
+    
+    .file .delete i, .folder .delete i
+    {
+        font-size:20px;
+        color:#ccc;
+        padding:0;
+    }
+    
+    .file .delete, .folder .delete
+    {
+        padding:0;
+    }
+    
+    .file span, .folder span {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        max-width: 100%;
+    }
+    
+    .folder.highlighted 
+    {
+        background-color: #eee;
+    }
+</style>
+
+<div name="dropZone" class="drop-zone">
+    <div name="headerArea">
+        <button name="backButton" class="back" style="visibility:hidden;"><span class="first"><i class="bi bi-arrow-return-left"></span></i><span class="second">&nbsp;&nbsp;Back</span></button>
+    </div>
+    <div name="bodyArea" class="drop-area">
+        <div class="text-center" style="width:100%; height:100%; margin-top:60px;">Drag and drop files or folders here.</div>
+        <div class="text-center" style="width:100%; opacity: .4;"><i class="bi bi-upload container-icon"></i></div>
+    </div>
+
+    <div name="footerArea" style="margin:5px; display: flex; flex-direction: row; font-size: 12px;">
+        <div style="flex-grow: 1;">&nbsp;</div>
+        <div>&nbsp;</div>
+    </div>
+</div>

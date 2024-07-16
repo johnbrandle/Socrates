@@ -1,0 +1,139 @@
+<!doctype html>
+
+<!--
+/**
+ * @license     BSL 1.1 (subject to the terms defined in the project's LICENSE file)
+ * @copyright   (c) 2023, John Brandle
+ */
+-->
+
+<html lang="en" data-bs-theme="dark" style="height:100%;">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Security-Policy" content="
+        font-src 'self'; 
+        img-src 'self' data:;
+        worker-src 'self';
+        frame-src 'self';
+        manifest-src 'self';
+        base-uri 'self';
+        ">
+
+        <title>Socrates URL Assistant</title>
+        <base href="/">
+        <link href="css/thirdparty/bootstrap.bundle.min.css" rel="stylesheet">
+        <script type="text/javascript" src="js/thirdparty/bootstrap/bootstrap.bundle.min.js"></script>
+
+        <script>
+            window.init = () => 
+            {
+                const baseUrls = document.getElementById('baseUrls');
+                const options = document.getElementById('options');
+                const constructedUrlDiv = document.getElementById('constructedUrl');
+
+                let selectedBaseUrl = '/';
+                const selectedOptions = new Set();
+
+                const updateUrl = () => 
+                {
+                    let url = `${selectedBaseUrl}?${Array.from(selectedOptions).join('&')}`;
+                    const target = self.bridgeAPI !== undefined ? '_self' : '_blank';
+                    
+                    //"assistant" lets the electron app know the assistant is requesting the navigation
+                    constructedUrlDiv.innerHTML = `<a href="${url}&assistant" target="${target}">${url}</a>`;
+                };
+
+                const highlightSelected = (element, container) => 
+                {
+                    Array.from(container.children).forEach(child => child.classList.remove('active'));
+                    element.classList.add('active');
+                }
+
+                baseUrls.addEventListener('click', (event) => 
+                {
+                    const target = event.target;
+                    if (target.tagName === 'LI') 
+                    {
+                        selectedBaseUrl = target.innerText;
+                        highlightSelected(target, baseUrls);
+                        updateUrl();
+                    }
+                });
+
+                options.addEventListener('click', (event) => 
+                {
+                    const target = event.target;
+                    if (target.tagName === 'LI') 
+                    {
+                        if (selectedOptions.has(target.innerText)) selectedOptions.delete(target.innerText);
+                        else selectedOptions.add(target.innerText);
+                        
+                        target.classList.toggle('active');
+                        updateUrl();
+                    }
+                });
+
+                // Initialize Bootstrap tooltips
+                const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+                const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) 
+                {
+                    return new bootstrap.Tooltip(tooltipTriggerEl);
+                });
+
+                // Set initial selections based on the 'active' class
+                const initialBaseUrl = document.querySelector('#baseUrls .active');
+                const initialOptions = document.querySelectorAll('#options .active');
+
+                if (initialBaseUrl) selectedBaseUrl = initialBaseUrl.innerText;
+                
+                initialOptions.forEach(option => 
+                {
+                    selectedOptions.add(option.innerText);
+                });
+
+                updateUrl();
+            }
+        </script>
+
+        <style>
+            li
+            {
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body style="background-color: black;" onload="window.init()">
+        <div class="container">
+            <div style="width:100%; text-align: center; margin-top:10px; margin-bottom:40px;">
+                <h2>URL Assistant</h2>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h4>Base</h4>
+                    <ul id="baseUrls" class="list-group">
+                        <li class="list-group-item active" title="Root Path" data-bs-toggle="tooltip" data-bs-placement="top">/</li>
+                        <li class="list-group-item" title="Login Page" data-bs-toggle="tooltip" data-bs-placement="top">/login</li>
+                        <li class="list-group-item" title="Registration Page" data-bs-toggle="tooltip" data-bs-placement="top">/register</li>
+                        <li class="list-group-item" title="Explorer Page" data-bs-toggle="tooltip" data-bs-placement="top">/explorer</li>
+
+                        <li class="list-group-item" title="Experiment Page" data-bs-toggle="tooltip" data-bs-placement="top">/experiment</li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h4>Options</h4>
+                    <ul id="options" class="list-group">
+                        <li class="list-group-item active" title="Enable Debug Mode" data-bs-toggle="tooltip" data-bs-placement="top">d</li>
+                        <li class="list-group-item active" title="Enable Progressive Web App Mode" data-bs-toggle="tooltip" data-bs-placement="top">pwa</li>
+                        <li class="list-group-item" title="Enable Plain Text Mode (uses plain text when possible)" data-bs-toggle="tooltip" data-bs-placement="top">pt</li>
+                        <li class="list-group-item" title="Enable Simulated Offline Mode" data-bs-toggle="tooltip" data-bs-placement="top">o</li>
+                        <li class="list-group-item" title="Enable Safe Mode" data-bs-toggle="tooltip" data-bs-placement="top">s</li>
+                        <li class="list-group-item" title="Enable Unit Testing Mode" data-bs-toggle="tooltip" data-bs-placement="top">test</li>
+                        <li class="list-group-item" title="Enables misc. experimental code" data-bs-toggle="tooltip" data-bs-placement="top">e</li>
+                        <li class="list-group-item" title="Clear localStorage, OPFS, and IndexedDB data" data-bs-toggle="tooltip" data-bs-placement="top">clear</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="constructedUrl" class="mt-3"></div>
+        </div>
+    </body>
+</html>

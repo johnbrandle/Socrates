@@ -1,0 +1,64 @@
+<style type="text/scss">
+    .text-center 
+    {
+        text-align: center;
+    }
+    .input-group 
+    {
+        display: flex;
+        align-items: center;
+    }
+
+    /* input field */
+    .input-field 
+    {
+        letter-spacing: 0.75px;
+        text-align: left !important;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        height:42px;
+        cursor:text;
+    }
+    .input-field:focus 
+    {
+        outline: none;
+        box-shadow: none;
+        border: var(--bs-border-width) solid var(--bs-border-color);
+        border-right: none;
+    }
+
+    /* input field buttons */
+    .lost-button 
+    {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        height:42px;
+    }
+
+    .visibility-button 
+    {
+        border: var(--bs-border-width) solid var(--bs-border-color);
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
+        background-color: var(--bs-form-control-bg);
+    }
+    .visibility-button:first-child:hover, .lost-button:first-child:focus
+    {
+        border: var(--bs-border-width) solid var(--bs-border-color);  
+        border-radius: 0;
+        border-left: none;
+        border-right: none;       
+    }
+
+    /* submit button */
+    .custom-login-button 
+    {
+        width: 150px;
+    }
+</style>
+   
+<div data-component="library/components/view/Viewer" name="viewer">
+    <div data-component="./views/KeyView" name="keyView"></div>
+    <div data-component="./views/TOTPView" name="totpView"></div>
+</div>

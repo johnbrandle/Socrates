@@ -1,0 +1,33 @@
+name = "user"
+main = "src/index.ts"
+compatibility_date = "2023-05-02"
+
+route = "localhost/api/user/*"
+
+vars.environment = "dev"
+vars.proxyEnabled = true
+vars.useKVSessionImplementation = true #if true, uses kv for session storage, otherwise uses sql db
+
+vars.proxyKeyHeaderName = "xy-proxy-key"
+vars.proxyPassedHeaderName = "xy-proxy-passed"
+vars.serviceKeyHeaderName = "xy-service-key"
+vars.adminKeyHeaderName = "xy-admin-key"
+
+#THE FOLLOWING KEYS MUST BE UNIQUE AND SECURE
+vars.proxyKey = "UUID" 
+vars.serviceKey = "UUID"
+vars.adminKey = "UUID"
+
+vars.pepper = "4ac1f872482a3a9e2a3e6a1058c0a457"
+
+kv_namespaces = [
+  { binding = "userSessionKVDB", id = "e29b263ab50e42ce9b637fa8370175b9", preview_id = "5a895946c6d3442fabac8f9966447a28" } #kv session storage
+]
+
+d1_databases = [
+  { binding = "userDB", database_name = "userDB", database_id = "<UUID>" }
+]
+
+services = [
+  { binding = "wallet", service = "wallet" }
+]

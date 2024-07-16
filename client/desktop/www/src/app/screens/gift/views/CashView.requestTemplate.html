@@ -1,0 +1,119 @@
+<template name="printable">
+    <style type="text/scss">
+        .separator 
+        {
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+
+        .separator::before,
+        .separator::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px dotted #000;
+        }
+
+        .separator:not(:empty)::before {
+            margin-right: .25em;
+        }
+
+        .separator:not(:empty)::after {
+            margin-left: .25em;
+        }
+    </style>
+
+    <div class="component-content screens-Gift" style="height:750px;">
+        <div>
+            <!-- intro text -->
+            
+            <p class="text-center">
+                Cut along the dotted line. Insert this top half and $5 dollars into a standard security envelope. Then, mail the envelope to the address below.<br/>
+            </p>
+
+            <!-- vertical spacing between elements -->
+            <div style="margin-top:25px;"></div>
+
+            <p class="text-center"><b>IMPORTANT</b>: This page is valid for a single purchase request, only!</p>
+
+            <!-- vertical spacing between elements -->
+            <div style="margin-top:30px;"></div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div style="display:flex; justify-content:center; align-items:center; height:100%; text-align:left; margin-bottom: 10px;">
+                            <div>
+                                <b>MAIL TO:</b><br/><br/>
+                                <span>
+                                    ATTN: <span name="randomCode"></span><br/>
+                                    Socrates OS<br/>
+                                    3087 Ridge Gate RD<br/>
+                                    PO Box 304<br/>
+                                    Dallas TX, 79034
+                                </span>
+                            </div>
+                        </div>                          
+                    </div>
+                    <div class="col">
+                        <div style="display:flex; justify-content:center; align-items:center; height:100%;"> 
+                            <div name="activationQRcode" style="transform:scale(.5); transform-origin: 0 0; width:186px; height:186px;"></div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div style="display:flex; justify-content:center; align-items:center; height:100%; text-align:right; margin-bottom: 10px;">
+                            <div>
+                                <div name="foo">KDJFK</div>
+                                <div name="foo">KDJFK</div>
+                                <div name="foo">KDJFK</div>
+                                <div name="foo">KDJFK</div>
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 30px;"></div>
+
+            <div class="separator"><b>cut along this line</b></div>
+
+            <!-- vertical spacing between elements -->
+            <div style="margin-top: 20px;"></div>
+
+            <p class="text-center">
+                <i>Keep this half for your records.</i>
+            </p>
+
+            <!-- vertical spacing between elements -->
+            <div style="margin-top: 20px;"></div>
+
+            <ul>
+                <li>We neither require nor recommended adding a return address.</li>
+                <li>Ensure cash is not visible through the envelope when held in the light.</li>
+                <li>One purchase request per envelope.</li>
+                <li>USPS is recommended. Envelopes only (packages not accepted).</li>
+                <li>Paper currency only (USD).</li>
+                <li>Purchase must not be with criminal intent.</li>
+                <li>No refunds or cancellations. Send at your own risk.</li>
+            </ul>
+
+            <!-- vertical spacing between elements -->
+            <div style="margin-top: 20px;"></div>
+
+            <div class="text-center">
+                <div>Purchase Request Creation Date: October 11 2023</div>
+                <div name="foo">Amount: $50/5000 tokens (10% discount)</div>
+                <div name="foo">Delivery Code: X54RS-A</div>
+                <br/>
+                <div>Activation Code (do not share):</div>
+                <div name="foo">KDJFKJ KDJFKJ KDJFK KDJFK</div>
+            </div>
+
+            <br/>
+            <p class="text-center">
+                This purchase request must be sent before 11/11/2023. Check the status of your request in your account page. If it is not fulfilled within 10 business days, please contact us at support@socratesos.com with the above Delivery and Activation codes.<br/>
+            </p>
+        </div>
+    </div>
+</template>

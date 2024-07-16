@@ -1,0 +1,19 @@
+{
+    "compilerOptions": 
+    {
+        "module": "esnext",
+        "target": "esnext",
+        "lib": ["esnext", "DOM"],
+        "esModuleInterop": true,
+        "strict": true,
+        "noImplicitAny": true,
+        "moduleResolution": "bundler",
+        "sourceMap": true,
+        "forceConsistentCasingInFileNames": true,
+        "noEmit": true,
+        "allowImportingTsExtensions": true,
+        "resolveJsonModule": true,
+        "allowSyntheticDefaultImports":true 
+    }
+}
+  

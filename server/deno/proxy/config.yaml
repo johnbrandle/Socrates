@@ -1,0 +1,8 @@
+local:
+  port: 3000
+  cert: ''
+  key: ''
+remote:
+  port: 3000
+  cert: /run/secrets/remote-cert
+  key: /run/secrets/remote-privkey

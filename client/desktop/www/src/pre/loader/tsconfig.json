@@ -1,0 +1,24 @@
+{
+    "include":["../../../www.d.ts", "../../../../shared/shared.d.ts"],
+    "exclude": ["/node_modules/"],
+    "files":["./Loader.ts"],
+    "compilerOptions": 
+    {
+        "sourceMap": true,
+        "module": "esnext",
+        "lib": ["esnext", "DOM"],
+        "target": "esnext",
+        "jsx": "react",
+        "strict": true,
+        "allowJs": false,
+        "moduleResolution": "bundler",
+        "resolveJsonModule": true,
+        "allowSyntheticDefaultImports":true,
+        "esModuleInterop":false,
+        "forceConsistentCasingInFileNames":true,
+        "verbatimModuleSyntax":true,
+        "noEmit": true,
+        "allowImportingTsExtensions":true,
+        "experimentalDecorators": true,
+    }
+}

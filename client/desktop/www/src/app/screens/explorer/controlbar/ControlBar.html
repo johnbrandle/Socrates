@@ -1,0 +1,126 @@
+<style type="text/scss">
+    .custom-navbar {
+        display: flex;
+        justify-content: flex-end;
+        padding: 2px;
+        margin: 6px 5px 5px 5px;
+
+        .left-section {
+            flex-grow: 1;
+            background-color: rgba(33, 37, 41, .45);
+            border-bottom-left-radius: 10px;
+            border-top-left-radius: 10px;
+            /*
+            border-style: solid;
+            border-width: 1px;
+            border-color: rgba(233, 223, 223, 0.09);*/
+            border-right: none;
+            height: 35px;
+        }
+
+        &.hide-left .left-section {
+            display: none;
+            background-color: transparent;
+            flex-grow: 1;
+        }
+
+        &.hide-left .right-section {
+            border-bottom-left-radius: 10px;
+            border-top-left-radius: 10px;
+            /*border-left: 1px solid rgba(233, 223, 223, 0.09);*/
+        }
+
+        .right-section {
+            padding: 5px 5px 5px 10px;
+            background-color: rgba(33, 37, 41, .45);
+            border-bottom-right-radius: 10px;
+            border-top-right-radius: 10px;
+           /*
+            border-style: solid;
+            border-width: 1px;
+            border-left: none;
+            border-color: rgba(233, 223, 223, 0.09); */
+            height: 35px;
+        }
+
+        .icon {
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+        .icon.open {
+            position: relative;
+        }
+
+        .icon.open::after {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: orange;
+        }
+
+        .icon.selected {
+            padding: 5px;
+            background-color: rgba(255, 165, 0, 0.2);
+            border-radius: 4px;
+        }
+
+        .nav-link
+        {
+            padding:5px;
+        }
+
+        .nav-link:hover 
+        {
+            background-color: rgba(255, 165, 0, 0.2); /* Example hover color */
+            border-radius: 4px;
+        }
+    }
+</style>
+
+<nav class="navbar navbar-expand-lg custom-navbar"> <!-- Add or remove "hide-left" class as needed -->
+
+    <!--div class="left-section"-->
+        <!-- Left content (Logo and Dropdown) goes here -->
+        <!--div class="dropdown"-->
+            <!-- Add dropdown content here -->
+      <!--  </div>
+    </div>
+    -->
+    <div class="right-section">
+        <!--
+        <div class="dropdown d-inline">
+            <a class="nav-link d-inline dropdown-toggle" href="#" role="button" id="slidersDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-sliders"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="slidersDropdown">
+                <li><a class="dropdown-item" href="#">Option 1</a></li>
+                <li><a class="dropdown-item" href="#">Option 2</a></li>
+                <li><a class="dropdown-item" href="#">Option 3</a></li>
+            </ul>
+        </div>
+        -->
+        <a class="nav-link d-inline" href="#"><i class="bi bi-shield-fill-check icon"></i></a>
+        <a class="nav-link d-inline" href="#"><i class="bi bi-cloud-upload-fill icon"></i></a>
+        <a class="nav-link d-inline" href="#"><i class="bi bi-cloud-download-fill icon"></i></a>
+        <div class="dropdown d-inline">
+            <a class="nav-link d-inline dropdown-toggle" href="#" role="button" id="gearDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-gear-fill icon"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="gearDropdown">
+                <li name="aboutItem"><a class="dropdown-item" href="#">About</a></li>
+                <li name="settingsItem"><a class="dropdown-item" href="#">Settings...</a></li>
+                <li><hr class="dropdown-divider"></li> <!-- Delimiter line -->
+                <li name="lockItem"><a class="dropdown-item" href="#">Lock</a></li>
+                <li name="logoutItem"><a class="dropdown-item" href="#">Logout</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+

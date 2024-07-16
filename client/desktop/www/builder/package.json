@@ -1,0 +1,45 @@
+{
+  "name": "untitled",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "ts-node --project tsconfig.json src/config.dev.ts",
+    "prod": "ts-node --project tsconfig.json src/config.prod.ts"
+  },
+  "author": "John Brandle",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "browserslist": "last 2 versions",
+  "devDependencies": {
+    "@types/clean-css": "^4.2.6",
+    "@types/crypto-js": "^4.1.1",
+    "@types/fs-extra": "^11.0.1",
+    "@types/js-yaml": "^4.0.5",
+    "@types/micromatch": "^4.0.2",
+    "cheerio": "^1.0.0-rc.12",
+    "chokidar": "^3.5.3",
+    "clean-css": "^5.3.2",
+    "crypto-js": "^4.1.1",
+    "css-loader": "^6.7.3",
+    "fork-ts-checker-webpack-plugin": "^8.0.0",
+    "glob": "^10.3.4",
+    "html-loader": "^4.2.0",
+    "js-yaml": "^4.1.0",
+    "micromatch": "^4.0.5",
+    "sass": "^1.66.1",
+    "sass-loader": "^13.2.2",
+    "style-loader": "^3.3.1",
+    "ts-loader": "^9.4.4",
+    "ts-loader-addmanglepropcommentstransformer": "^1.0.0",
+    "ts-loader-forcesupertransformer": "^1.1.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6",
+    "webpack-cli": "^5.1.4",
+    "yaml-loader": "^0.8.0"
+  }
+}

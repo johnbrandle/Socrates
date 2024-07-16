@@ -1,0 +1,235 @@
+<style type="text/scss">
+    /* resize divider */
+    .resize-divider 
+    {
+        width: 10px;
+        height:100%;
+        cursor: ew-resize;
+        background-color: #343a40;
+    }
+
+    /* path/search input textfield */
+    .path-textfield
+    {
+        letter-spacing: 0.75px;
+        text-align: left !important;
+        border-radius: var(--bs-border-radius) !important;
+        border-top-right-radius: 0 !important;
+        border-bottom-right-radius: 0 !important;
+        height:42px;
+        cursor:text;
+        background-color: var(--bs-body-bg);
+    }
+
+    .path-textfield:focus 
+    {
+        outline: none;
+        box-shadow: none;
+        border: var(--bs-border-width) solid var(--bs-border-color);
+        border-right:none;
+    }
+
+    /* path search options button */
+    .searchoptions-button 
+    {
+        border: var(--bs-border-width) solid var(--bs-border-color);
+        border-left: none;
+        border-top-left-radius: 0 !important;
+        border-bottom-left-radius: 0 !important;
+        background-color: var(--bs-body-bg);
+    }
+
+
+    /* options panel */
+    .options-button 
+    {
+        border: var(--bs-border-width) solid var(--bs-border-color);
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
+        background-color: var(--bs-secondary-bg);
+    }
+    .options-button:first-child:hover, .options-button:first-child:focus
+    {
+        border: var(--bs-border-width) solid var(--bs-border-color);  
+        border-radius: 0;
+        border-left: none;
+        border-right: none;       
+    }
+
+    .options-panel 
+    {
+        display: none;
+        position: absolute;
+        z-index: 10;
+        min-width: 300px;
+        max-width: 400px;
+        background: var(--bs-tertiary-bg);
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 0.25rem 0.25rem;
+        padding: 1rem;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        right: 0;
+        margin-right:-125px;
+        top: 100%; /* Position the panel right below the button */    
+    }
+    .options-panel::before 
+    {
+        content: '';
+        position: absolute;
+        top: -5px;
+        right: 68px;
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-bottom: 5px solid var(--bs-secondary-bg);
+    }
+    .options-panel.open 
+    {
+        display: block;
+    }
+
+
+</style>
+
+<div style="display:flex; flex-direction:column; height:100%;">
+
+    <!-- header -->
+    <div style="background-color:#343a40; color:white; padding:10px; display:flex; justify-content:space-between; align-items:center;">
+
+        <!-- home, back, forward, up buttons, path/searcg text field, and search options button -->
+        <div class="input-group" style="margin-right:10px;">
+            <div class="nav-input-group" style="margin-right:10px">
+                <button name="homeButton" class="btn btn-outline-secondary" type="button" style="margin-right:8px;">
+                    <i class="bi bi-house"></i>
+                </button>
+
+                <button name="backButton" class="btn btn-outline-secondary" type="button">
+                    <i class="bi bi-arrow-left"></i>
+                </button>
+                <button name="forwardButton" class="btn btn-outline-secondary" type="button" style="margin-right:8px;">
+                    <i class="bi bi-arrow-right"></i>
+                </button>
+                <button name="upButton" class="btn btn-outline-secondary" type="button">
+                    <i class="bi bi-arrow-up"></i>
+                </button>
+            </div>
+            
+            <input type="text" name="pathTextField" class="form-control text-center path-textfield" autocomplete="off">
+            <div style="display: flex;">
+            
+                <!-- filter options button -->
+                <button class="btn btn-outline-secondary searchoptions-button" type="button" name="filterOptionsButton" style="z-index:unset;" title="search options">
+                    <i class="bi bi-filter"></i>
+                </button>
+
+                    <!-- filter options panel -->
+                    <div class="options-panel" name="filterOptionsPanel">      
+                        
+                        <!-- filter by file type -->
+                        <h6 class="mt-1">Type</h6>
+                        <div style="display: flex; justify-content: center; align-items: center;">
+                            <div class="btn-group" role="group" aria-label="File/Folder Type">
+                                <button type="button" class="btn btn-outline-primary active" name="typeButtons">All</button>
+                                <button type="button" class="btn btn-outline-primary" name="typeButtons">Folders</button>
+                                <button type="button" class="btn btn-outline-primary" name="typeButtons">Files</button>
+                            </div>
+                        </div>
+
+                        <!-- vertical spacing between elements -->
+                        <div style="margin-top: 25px;"></div>
+
+                        <!-- filter by size -->
+                        <span>
+                            <h6 class="mt-3" style="display: inline;">Size</h6>
+                            <span class="info">
+                                <i class="bi bi-info-circle" style="font-size:12px;"></i>
+                                <span class="tooltip" style="width:150px;">
+                                    Select files that are larger or smaller than a certain size.
+                                </span>
+                            </span>
+                        </span>
+                        <div name="bytesSlider" data-min="Min" data-max="Max" data-component="library/components/slider/HMultiSlider"></div>
+
+                        <!-- vertical spacing between elements -->
+                        <div style="margin-top: 25px;"></div>
+
+                        <!-- filter by last modified date -->
+                        <span>
+                            <h6 class="mt-3" style="display: inline;">Last Modified</h6>
+                            <span class="info">
+                                <i class="bi bi-info-circle" style="font-size:12px;"></i>
+                                <span class="tooltip" style="width:150px;">
+                                    Select files that have been modified within a certain time frame.
+                                </span>
+                            </span>
+                        </span>
+                        <div name="lastModifiedSlider" data-min="Min" data-max="Max" data-component="library/components/slider/HMultiSlider"></div>
+                           
+                        <!-- vertical spacing between elements -->
+                        <div style="margin-top: 25px;"></div>
+
+                        <div style="display: flex; justify-content: center; align-items: center;">
+                            <button name="resetButton" type="button" class="btn btn-primary">Reset</button>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        
+        <!-- display option buttons -->
+        <div class="btn-group" style="margin-right:10px;">
+            <button class="btn btn-secondary" type="button" name="displayOptionButtons">
+                <i class="bi bi-grid"></i>
+            </button>
+
+            <button class="btn btn-outline-secondary" type="button" name="displayOptionButtons">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" style="vertical-align: -.125em;">
+                    <path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h11A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-11A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-11zM1 10.5A1.5 1.5 0 0 1 2.5 9h11A1.5 1.5 0 0 1 15 10.5v3A1.5 1.5 0 0 1 13.5 15h-11A1.5 1.5 0 0 1 1 13.5v-3zM2.5 10a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-11z"/>
+                  </svg> 
+            </button>
+
+            <button class="btn btn-outline-secondary" type="button" name="displayOptionButtons">
+                <i class="bi bi-grid-1x2"></i>
+            </button>
+        </div>
+
+        <!-- settings button -->
+        <div class="btn-group">
+            <button class="btn btn-outline-secondary" type="button">
+                <i class="bi bi-three-dots-vertical"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- body -->
+    <div style="flex: 1; display: flex; overflow: hidden;">
+
+        <!-- sidebar -->
+        <div name="sidebar" style="min-width:150px; max-width:calc(50% - 5px); overflow-y:hidden;">
+            <!--
+            <div name="sidebarView" data-component="./views/sidebar/SidebarView"></div>
+            -->
+        </div>
+
+        <!-- resize divider -->
+        <div name="resizeDivider" class="resize-divider"></div>
+        
+        <!-- main -->
+        <div style="flex:1; overflow-y:hidden;">
+            <!--
+            <div name="boardViewer" data-component="library/components/view/Viewer" data-transition="new transition:Promise()" data-effect="new effect:None()" data-queue="true" data-duration="0">
+                <div name="gridView" data-component="./views/grid/GridView"></div>
+                <div name="rowView" data-component="./views/row/RowView"></div>
+                <div name="treeView" data-component="./views/tree/TreeView"></div>
+            </div>
+            -->
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div name="footer" style="font-size:x-small; background-color: #343a40; color: white; padding-top: 5px; padding-bottom: 4px; padding-left:8px; text-align: left; overflow: hidden;">
+        <!-- Footer content goes here -->
+        127 files and 3 folders
+    </div>
+</div>

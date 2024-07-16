@@ -1,0 +1,49 @@
+<div class="component-content">
+    <div>
+        <form>  
+            <!-- intro text -->
+            <p class="text-center">Welcome! Please enter your access key below.</p>
+
+            <!-- vertical spacing between elements -->
+            <div style="margin-top: 35px;"></div>
+
+            <div class="row justify-content-center"> 
+                <!-- input field -->
+                <div class="input-group mb-3">
+                    <input type="text" name="keyTextField" maxlength="100" spellcheck="false" autocomplete="current-password" class="form-control text-center input-field" placeholder="Enter or paste your key here...">
+                    
+                    <div style="display: flex;">
+                    
+                        <!-- visibility button -->
+                        <button class="btn btn-outline-secondary visibility-button" type="button" name="visibilityButton" style="z-index:unset;" title="show or hide your key as you type">
+                            <i class="bi bi-eye-slash"></i>
+                        </button>
+
+                        <!-- lost button -->
+                        <button class="btn btn-outline-secondary lost-button" type="button" name="lostButton" style="z-index:unset;" title="Misplaced your key?">
+                            <i class="bi bi-question"></i>
+                        </button>       
+                    </div>
+                </div>
+            </div>
+
+            <!-- vertical spacing between elements -->
+            <div style="margin-top: 25px;"></div>
+
+            <!-- follow up text -->
+            <p class="text-center">
+                Don't have an account? Create yours <a href="./register">here</a> for free. 
+            </p>
+
+            <!-- vertical spacing between elements -->
+            <div style="margin-top: 55px;"></div>
+
+            <!-- register button -->
+            <div class="row justify-content-center">
+                <div class="d-grid justify-content-center mb-3">
+                    <button class="btn btn-primary custom-login-button" disabled type="button" name="loginButton">Continue</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

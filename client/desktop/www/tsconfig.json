@@ -1,0 +1,23 @@
+{
+    "exclude":["./css", "./data", "./js", "/node_modules/", "./redirects", "./src/pre", "./src/library/workers", "./src/app/workers", "./builder"],
+    "compilerOptions": 
+    {
+        "sourceMap": true,
+        "module": "esnext",
+        "lib": ["esnext", "DOM"],
+        "target": "esnext",
+        "jsx": "react",
+        "strict": true,
+        "allowJs": false,
+        "moduleResolution": "Node",
+        "resolveJsonModule": true,
+        "experimentalDecorators": true,
+        "allowSyntheticDefaultImports":true,
+        "esModuleInterop":false,
+        "forceConsistentCasingInFileNames":true,
+        "verbatimModuleSyntax":true,
+        "noEmit":true,
+        "allowImportingTsExtensions":true,
+        "importHelpers":true,
+    }
+}

@@ -1,0 +1,94 @@
+<style type="text/scss">
+    .tile-sidebar 
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+    }
+
+    .tile-sidebar.outline
+    {
+        outline: 1px dotted #99999922;
+    }
+
+    .tile-sidebar-content
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        width: 100%;
+        height: 100%;
+    }
+
+    .tile-sidebar-content .thumb
+    {
+        display: flex;
+        align-items: center;
+    }
+
+    .tile-sidebar-content .thumb > * /* just children */
+    {
+        cursor: pointer;
+    }
+
+    .tile-sidebar-content .name
+    {
+        font-size: 12px;
+        white-space: nowrap; /* Prevent text from wrapping */
+        overflow: hidden; /* Hide overflowing text */
+        text-overflow: ellipsis; /* Show an ellipsis when text overflows */
+        width: 100%; /* Set the container width */
+        text-align: left;
+        border: 1px solid transparent; /* To preserve the layout during editing */
+        cursor: pointer;
+    }
+
+    .tile-sidebar-content img
+    {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        vertical-align: top;
+        border-radius: 10px;
+        border: 3px solid #ffffff0a; 
+    }
+
+    .tile-sidebar-content canvas
+    {
+        width:100%;
+        height:100%;
+        object-fit: contain;
+        vertical-align: top;
+        border-radius: 10px;
+
+        border: 3px solid #ffffff0a; 
+    }
+
+    .tile-sidebar-content .name[contenteditable="true"] 
+    {
+        border-color: #ccc; /* Visible border during editing */
+    }
+
+    .tile-sidebar-content.visible
+    {
+        display: flex;
+    }
+
+    .tile-sidebar .dragging 
+    {
+        opacity: 0.5;
+    }
+</style>
+
+<template name="tileTemplate">
+    <div name="icon" class="tile-sidebar" draggable="false">
+        <div name="content" class="tile-sidebar-content">
+            <span name="thumb" class="thumb">
+                <i class="bi bi-folder"></i>
+            </span>
+            <span name="name" contenteditable="false" class="name"></span>
+        </div>
+    </div>
+</template>

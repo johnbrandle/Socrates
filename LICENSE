@@ -1,0 +1,156 @@
+## Global License
+    Files contained herein, unless otherwise indicated, are governed by the following license:
+
+        Business Source License 1.1
+
+        License text copyright © 2023 MariaDB plc, All Rights Reserved. “Business Source License” is a trademark of MariaDB plc.
+
+        Licensor: John Brandle
+        
+        Licensed Work: The Licensed Work is (c) 2023, John Brandle
+        
+        Additional Use Grant: You may replicate, modify, and use the Licensed Work, including hosting a personal server, solely for personal, 
+        non-commercial purposes. This grant explicitly excludes any form of commercial use or distribution of the Licensed Work or its 
+        derivatives, either directly or through a third party.
+        
+        Change Date: 2026-01-01
+        
+        Change License: The 3-Clause BSD License
+
+        Terms:
+
+            You must adhere to the Use Authoriziations defined above.
+            
+            If you do not adhere to the terms set forth in this License for the use of the Licensed Work, 
+            you are required to cease any use of the Licensed Work immediately.
+
+            All copies of the original and modified Licensed Work, and derivative works of the Licensed Work, are subject to this 
+            License. This License applies separately for each version of the Licensed Work and the Change Date may vary for each 
+            version of the Licensed Work released by Licensor.
+
+            You must conspicuously display this License on each original or modified copy of the Licensed Work. If you receive the 
+            Licensed Work in original or modified form from a third party, the terms and conditions set forth in this License apply 
+            to your use of that work.
+
+            Any use of the Licensed Work in violation of this License will automatically terminate your rights under this License 
+            for the current and all other versions of the Licensed Work.
+
+            This License does not grant you any right in any trademark or logo of Licensor or its affiliates (provided that you may 
+            use a trademark or logo of Licensor as expressly required by this License). TO THE EXTENT PERMITTED BY APPLICABLE LAW, 
+            THE LICENSED WORK IS PROVIDED ON AN “AS IS” BASIS. LICENSOR HEREBY DISCLAIMS ALL WARRANTIES AND CONDITIONS, EXPRESS OR 
+            IMPLIED, INCLUDING (WITHOUT LIMITATION) WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, 
+            AND TITLE. MariaDB hereby grants you permission to use this License’s text to license your works, and to refer to it using 
+            the trademark “Business Source License”, as long as you comply with the Covenants of Licensor below.
+
+        Covenants of Licensor:
+            
+            In consideration of the right to use this License’s text and the “Business Source License” name and trademark, Licensor 
+            covenants to MariaDB, and to all other recipients of the licensed work to be provided by Licensor:
+
+            To specify as the Change License the GPL Version 2.0 or any later version, or a license that is compatible with GPL Version 2.0 
+            or a later version, where “compatible” means that software provided under the Change License can be included in a program with 
+            software provided under GPL Version 2.0 or a later version. Licensor may specify additional Change Licenses without limitation.
+            To either: (a) specify an additional grant of rights to use that does not impose any additional restriction on the right granted 
+            in this License, as the Additional Use Grant; or (b) insert the text “None” to specify a Change Date. Not to modify this License 
+            in any other way.
+
+        Note:
+        
+            The Business Source License (this document, or the “License”) is not an Open Source license. However, the Licensed Work will 
+            eventually be made available under an Open Source License, as stated in this License.
+
+            For more information on the use of the Business Source License for MariaDB products, please visit the MariaDB Business Source 
+            License FAQ. For more information on the use of the Business Source License generally, please visit the Adopting and Developing 
+            Business Source License FAQ.
+
+## License Agreement for Contributions
+
+    By contributing to this project, you agree to the following terms:
+
+    1. License Consistency for Existing Files: Any contributions to existing files within this project must adhere to the license terms already
+    specified for those files. By contributing, you agree to license your modifications under the same terms as the existing file.
+    
+    2. Default License for New Files: Any new files created and contributed by you to this project will automatically be licensed under the 
+    Global License as specified in the project's LICENSE file at the time of the contribution, unless otherwise agreed upon in writing.
+
+    3. No Attribution Requirement: Unless a contributor explicitly includes an attribution within their submission, it will be assumed that 
+    the contributor does not require attribution for their contribution.
+
+    4. Retention of Rights: Contributors retain all rights to use their own contributions for any other purpose outside of this project 
+    without limitation, provided such use does not infringe on the proprietary rights of the project under its current license.
+
+    Note:
+
+        The aim is for contributions to integrate seamlessly into the project without imposing legal or administrative complexities.
+
+## Digital Signature
+
+The following digital signature verifies the authenticity of the above copyright statement:
+
+-----BEGIN PGP MESSAGE-----
+
+yJMCeJw7wsvMwCV83u3WPFtd3gmMp2VKGdIKly3TSNZUMDIwMtZR8MrPyFNwKkrM
+S8lJPRTHwiDMxcDGygRSw8DFKQDTeLWe4a/wBKHfuoFsCVwh8xRfpf+Jnam329/x
+4MFts+UfvuxP/KfOyDBVXd5sw//09rXlKtIttdb7PryJO9J289ZTj9AZr/14q24A
+AHcXOAA=
+=dW+Z
+-----END PGP MESSAGE-----
+
+## Public Key
+
+The following public key can be used to verify the above signature:
+
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+
+xm8EZnGmexMFK4EEACIDAwQMDx0P0/zFkE/TmVVKddoyVKiQTp04+M2swL0JF1VU
+jTS8MEhbmzRjr4NjRcblNYbsxg6Wwo/iLGY0O0s2hLSlu69wzwOb+BFPIJcr5RhW
+4kuhNOoMg19LogZbahbqHhXNL0pvaG4gQnJhbmRsZSAoU29jcmF0ZXMpIDxqb2hu
+YnJhbmRsZUBnbWFpbC5jb20+wpwEExMKACQFAmZxpnsCGy8DCwkHAxUKCAIeAQIX
+gAMWAgECGQEFCQAAAAAACgkQXsLcGTFJHFGn8gGA0Sk9waT7hEdRNKLlfasblxRS
+r+W1mwuRlESqPr2bkLbq29hBW5tj32TMcp1bH+PWAYCfR7fJ60PRRppwPUZkcXKw
+kkD0n1no3oZ4QhsF5Ze46+cquZ8wKci58x4VyUzXwXfOUgRmcaZ7EwgqhkjOPQMB
+BwIDBBEI3soNK++Jyxu9LWEIZUtyY0OWnZHWHQ/k+5S+1Dx5uo2y8gJRauI33Jgl
+LasWBs6eNl+TkI/cfoxqXxAkzWLCwCcEGBMKAA8FAmZxpnsFCQAAAAACGy4AagkQ
+XsLcGTFJHFFfIAQZEwoABgUCZnGmewAKCRBoer+LFyN4kSiXAQDUAvSmz7caeViT
+/hhCzb718WOaq+GKnqs2tRtkKmJZkgEA4Rx2ZE7EXCayg3iSpZ92PJ/s2FVt1rRn
+DpEvWQoNn0VTOwGAl0RaPm4tqBXjB7yL91i9Kn0mvyVJFyS3577z0kg9OyH4ssdQ
+2IXss3xkrDAFXkemAX9oRvhuvw+vl9RuHE+0/8SXPMQ0nkrqo3+ccLNbNGYpK4Gk
+RTFoPiBRxvCtBm3GyrnOUgRmcaZ7EwgqhkjOPQMBBwIDBNquaX+ceE1BGOtZGOkE
+ibEI01DbOM3dZXat/NmcqXUN0Pqpfto966tmRmG03eqD6cmtyMNtrj0gpOjw2dDx
+y3LCwCcEGBMKAA8FAmZxpnsFCQAAAAACGy4AagkQXsLcGTFJHFFfIAQZEwoABgUC
+ZnGmewAKCRDPRtqePS0NkAQgAP9AVWOBh566ncX6jF+RIfl5hOebZpepVhmFIsIY
+oQh4YAD+I7Ud1uqBPwSZ4HEc+M6Q4fXoX3YzMeT81dRQwJwCSoidkQGA5/TStrQv
+hk9GMqt0OnfULoCSTOLZgJZay4WZUeFvaIUVn6PQEMr6eo6q4SlFt6RaAYDNFZV1
+uZ7LxYFYj032U/TopZaaLLSiN5uAvVzHSZmor7k8AZx56/t6QLdgZa/PkHA=
+=GvN5
+-----END PGP PUBLIC KEY BLOCK-----
+
+## Licensing Reference Guide
+
+    Below is a list of licenses that may apply to various files, methods, or sections of this codebase. If a file, method, or section is annotated with a particular license, you can refer to this guide for details on that license.
+
+    - MIT: 
+        [SEE FILES FOR INDIVIDUAL COPYRIGHT INFO]
+
+        Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+        The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+        THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+    - The 3-Clause BSD License: 
+        [SEE FILES FOR INDIVIDUAL COPYRIGHT INFO]
+
+        Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+        1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+
+        2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+
+        3. Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+        THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS “AS IS” AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+## Note on Third-Party Dependencies
+
+    The licensing terms described in this document do not apply to third-party dependencies, which have their own respective licenses.

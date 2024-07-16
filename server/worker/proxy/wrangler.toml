@@ -1,0 +1,18 @@
+name = "proxy"
+main = "src/index.ts"
+compatibility_date = "2023-05-02"
+
+route = "localhost/api/proxy/*"
+
+vars.environment = "dev"
+vars.proxyEnabled = false
+
+vars.proxyKeyHeaderName = "xy-proxy-key"
+vars.proxyPassedHeaderName = "xy-proxy-passed"
+vars.serviceKeyHeaderName = "xy-service-key"
+vars.adminKeyHeaderName = "xy-admin-key"
+
+#THE FOLLOWING KEYS MUST BE UNIQUE AND SECURE
+vars.proxyKey = "UUID" 
+vars.serviceKey = ""
+vars.adminKey = ""

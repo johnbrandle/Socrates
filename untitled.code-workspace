@@ -1,0 +1,25 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+    "settings": {
+        "hide-files.files": [
+            "app/node_modules",
+            "app/config.json",
+            "workers/_shared/node_modules",
+            "workers/proxy/node_modules",
+            "workers/user/node_modules",
+            "workers/proxy/cmd.bat",
+            "workers/user/cmd.bat",
+            "tools/worker_test_case/worker/node_modules",
+            "app/cmd.bat"
+        ],
+        "deno.enable": true,
+        "deno.enablePaths": [
+            "./server/deno/",
+            "./deployment/"
+        ]
+	}
+}

@@ -1,0 +1,9 @@
+name = "user"
+main = "src/index.ts"
+compatibility_date = "2023-05-02"
+
+routes = [
+	{ pattern = "socratesos.com/api/user/*", custom_domain = true }
+]
+
+vars.env = "prod"

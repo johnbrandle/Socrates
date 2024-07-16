@@ -1,0 +1,121 @@
+<style type="text/scss">
+    .tile-row 
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+    }
+
+    .tile-row.outline
+    {
+        outline: 1px dotted #99999922;
+    }
+
+    .tile-row-grid
+    {
+        display: grid;
+        grid-template-columns: var(--col1-size) var(--col2-size) var(--col3-size) var(--col4-size) var(--col5-size);
+        /*outline: 1px solid red;*/ /* Temporary border for visualization */   
+    }
+
+    .tile-row-content
+    {
+        width: 100%;
+        height: 100%;
+        text-overflow: ellipsis; /* Show an ellipsis when text overflows */
+        overflow: hidden; /* Hide overflowing text */
+    }
+
+    .tile-row-content .thumb
+    {
+        display: flex;
+        align-items: center;
+    }
+
+    .tile-row-content .thumb > * /* just children */
+    {
+        cursor: pointer;
+        text-align: center;
+        display: inline-block;
+        width: 100%;
+    }
+
+    .tile-row-content .name
+    {
+        font-size: 12px;
+        white-space: nowrap; /* Prevent text from wrapping */
+        overflow: hidden; /* Hide overflowing text */
+        text-overflow: ellipsis; /* Show an ellipsis when text overflows */
+        width: 100%; /* Set the container width */
+        text-align: left;
+        border: 1px solid transparent; /* To preserve the layout during editing */
+        cursor: pointer;
+    }
+
+    .tile-row-content img
+    {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        vertical-align: top;
+        border-radius: 10px;
+        border: 3px solid #ffffff0a; 
+    }
+
+    .tile-row-content canvas
+    {
+        width:100%;
+        height:100%;
+        object-fit: contain;
+        vertical-align: top;
+        border-radius: 10px;
+
+        border: 3px solid #ffffff0a; 
+    }
+
+    .tile-row-content .name[contenteditable="true"] 
+    {
+        border-color: #ccc; /* Visible border during editing */
+    }
+
+    .tile-row-content.visible
+    {
+        display: flex;
+    }
+
+    .tile-row-content span
+    {
+        display: inline-flex;
+        align-items: center;
+        padding-left:5px;
+    }
+
+    .tile-row .dragging 
+    {
+        opacity: 0.5;
+    }
+</style>
+
+<template name="tileTemplate">
+    <div name="icon" class="tile-row" draggable="false">
+        <div name="content" class="tile-row-content tile-row-grid">
+            <span name="thumb" class="thumb column"> <!-- Column 1 -->
+                <i class="bi bi-folder"></i>
+            </span>
+            <span name="name" contenteditable="false" class="name column"> <!-- Column 2 -->
+                <!-- Name Content -->
+            </span>
+            <span name="modified" contenteditable="false" class="name column"> <!-- Column 2 -->
+                Two weeks Ago
+            </span>
+            <span name="size" contenteditable="false" class="name column"> <!-- Column 2 -->
+                500 GB
+            </span>
+            <span name="kind" contenteditable="false" class="name column"> <!-- Column 2 -->
+                JPEG
+            </span>
+            <!-- Add more columns here if needed -->
+        </div>
+    </div>
+</template>

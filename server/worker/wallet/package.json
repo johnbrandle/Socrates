@@ -1,0 +1,16 @@
+{
+  "name": "user",
+  "version": "0.0.0",
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20230404.0",
+    "better-sqlite3": "^8.0.1",
+    "typescript": "^5.0.4",
+    "wrangler": "2.18.0"
+  },
+  "private": true,
+  "scripts": {
+    "dev": "wrangler dev --local --persist --test-scheduled --port 8082 --config wrangler.toml",
+    "d1": "wrangler d1 execute walletDB --local --file=./schema.sql --config wrangler.toml",
+    "deploy": "wrangler publish --config wrangler.prod.toml"
+  }
+}

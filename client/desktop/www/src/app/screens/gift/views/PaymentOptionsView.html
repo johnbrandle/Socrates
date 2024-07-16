@@ -1,0 +1,47 @@
+<div class="component-content">
+    <div>
+        <h3 class="text-center">Select a Payment Method</h3>
+
+        <!-- vertical spacing between elements -->
+        <div style="margin-top: 45px;"></div>
+
+        <div class="row d-flex justify-content-center text-center">
+            
+            <!-- Cash pay -->
+            <div class="col-lg-6 col-md-6" style="cursor:pointer;">
+                <div class="container-card" name="cashPaymentOption">
+                    <i class="bi bi-cash-coin container-icon" style="color:#b0c100"></i>
+                    <h3>Cash</h3>
+                    <p>Send in the mail.</p>
+                    <span class="badge text-bg-success">Cheap</span>
+                    <span class="badge text-bg-success">Anonymous</span>
+                    <span class="badge text-bg-danger">Slow</span>
+                    <span class="badge text-bg-danger">Risky</span>
+                </div>
+            </div>
+
+            <!-- Gift card pay -->
+            <div class="col-lg-6 col-md-6" style="cursor:pointer;">
+                <div class="container-card" name="giftCardPaymentOption">
+                    <i class="bi bi-credit-card container-icon" style="color:#f2a9f0"></i>
+                    <h3>Gift Card</h3>
+                    <p>Buy elsewhere, then send the info.</p>
+                    <span class="badge text-bg-success">Anonymous</span>
+                    <span class="badge text-bg-warning">Slow</span>
+                    <span class="badge text-bg-danger">Pricy</span>
+                </div>
+            </div>
+
+            <!-- Crypto pay -->
+            <div class="col-lg-6 col-md-6" style="opacity:.35;">
+                <div class="container-card" name="cryptoPaymentOption">
+                    <i class="bi bi-currency-bitcoin container-icon" style="color:#f2a900"></i>
+                    <h3>Crypto <span style="font-size: 14px;">(coming soon)</span></h3>
+                    <p>Perform a transaction.</p>
+                    <span class="badge text-bg-success">Fast</span>
+                    <span class="badge text-bg-warning">Anonymous*</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

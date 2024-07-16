@@ -1,0 +1,40 @@
+<div class="component-content">
+    <div>
+        <form>
+            <!-- intro text -->
+            <p class="text-justify"><b>Next</b>, download a free authenticator app. We recommend <a target="_blank" href="https://raivo-otp.com/">Raivo</a> for iOS, or <a target="_blank" href="https://getaegis.app/">Aegis</a> for Android. Use the app to scan the QR code below. If you need help, click <a name="helpLink" href="">here</a>.</p>
+
+            <!-- vertical spacing between elements -->
+            <div style="margin-top: 35px;"></div>
+
+            <div class="row justify-content-center"> 
+                <div name="totpQRcode" style="transform: scale(.25); transform-origin: 0 0; width:153px; height:153px;"></div>
+            </div>
+
+            <!-- vertical spacing between elements -->
+            <div style="margin-top: 45px;"></div>
+
+            <!-- follow up text -->
+            <p class="text-justify">
+                <b>Lastly</b>, enter the 8 digit code the athenticator app generated, and click Submit. 
+            </p>
+
+            <div class="row justify-content-center"> 
+                <!-- totp field -->
+                <div class="mb-3 col-md-3" style="width:140px !important;">
+                    <input type="password" name="totpTextField" class="form-control text-center" autocomplete="one-time-code" placeholder="0000 0000" pattern="^\d{8}\s?$" required maxlength="9">
+                </div>
+            </div>
+
+            <!-- vertical spacing between elements -->
+            <div style="margin-top: 35px;"></div>
+
+            <!-- register button -->
+            <div class="row justify-content-center">
+                <div class="d-grid justify-content-center mb-3">
+                    <button class="btn btn-primary custom-submit-button" type="button" name="submitButton">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+# For cloudflare pages https://developers.cloudflare.com/pages/platform/headers/
+
+#todo, be more restrictive with this header later
+
+/*
+    X-Frame-Options: DENY
+    X-Content-Type-Options: nosniff
+    Referrer-Policy: no-referrer
+    Service-Worker-Allowed: /
+    Cross-Origin-Opener-Policy: same-origin
+    Cross-Origin-Embedder-Policy: require-corp
+    
+#Cross-Origin-Opener-Policy: cross-origin
+#Cross-Origin-Embedder-Policy: cross-origin
+#Cross-Origin-Resource-Policy: cross-origin

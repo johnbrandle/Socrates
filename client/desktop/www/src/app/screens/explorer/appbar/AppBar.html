@@ -1,0 +1,217 @@
+<style type="text/scss">
+.navbar-container 
+{
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap; /* Ensure that the navbar-container doesn't wrap */
+}
+
+.custom-navbar 
+{
+    padding: 6px;
+    margin-bottom: 12px;
+    background-color: rgba(33, 37, 41, 0.20);
+    border-radius: 10px;
+    white-space: nowrap; /* Prevent wrapping within the navbar */
+
+    .navbar-grid 
+    {
+        display: flex;
+        justify-content: center;
+    }
+
+    .center-icons 
+    {
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap; /* Ensure that the icons don't wrap */
+    }
+
+    .icon 
+    {
+        padding-left: 6px;
+        padding-right: 6px;
+        position: relative;
+        font-size: 32px;
+        overflow: visible; /* Ensure pseudo-element is visible */
+    }
+
+    .icon.open::after 
+    {
+        content: "";
+        position: absolute;
+        bottom: -5px; /* Adjust this value to position the orange line below the icon */
+        left: 50%; /* Centering the line */
+        transform: translateX(-50%); /* Centering the line */
+        width: 20px; /* Set the desired width here */
+        height: 2px;
+        background-color: orange;
+    }
+
+    .icon.selected, 
+    .icon:hover 
+    {
+        padding: 6px;
+        background-color: rgba(255, 165, 0, 0.2);
+        border-radius: 4px;
+    }
+
+    .no-wrap
+    {
+        white-space: nowrap;
+    }
+}
+</style>
+
+<div class="navbar-container">
+    <nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
+        <div class="navbar-grid">
+            <!-- Centered Icons -->
+            <div class="center-icons">
+
+                <div class="info">
+                    <a class="nav-link d-inline" href=""><i data-id="filesandfolders" class="bi bi-folder2 icon"></i></a>
+                    <div class="tooltip no-wrap">
+                        Files & Folders
+                    </div>
+                </div>
+
+                <div class="info">
+                    <a class="nav-link d-inline" href=""><i data-id="contacts" class="bi bi-person-lines-fill icon"></i></a>
+                    <div class="tooltip no-wrap">
+                        Contacts
+                    </div>
+                </div>
+                
+                <div class="info">
+                    <a class="nav-link d-inline" href=""><i data-id="browse" class="bi bi-browser-chrome icon"></i></a>
+                    <div class="tooltip no-wrap">
+                        Browse <!--Twilight-->
+                    </div>
+                </div>
+
+                <div class="info">
+                    <a class="nav-link d-inline" href=""><i data-id="media" class="bi bi-collection-fill icon"></i></a>
+                    <div class="tooltip no-wrap">
+                        Media <!-- pixie -->
+                    </div>
+                </div>
+
+                <div class="info">
+                    <a class="nav-link d-inline" href=""><i data-id="documents" class="bi bi-stack icon"></i></a>
+                    <div class="tooltip no-wrap">
+                        Documents <!-- letters -->
+                    </div>
+                </div>
+
+                <div class="info">
+                    <a class="nav-link d-inline" href=""><i data-id="wallet" class="bi bi-wallet-fill icon"></i></a>
+                    <div class="tooltip no-wrap">
+                        Wallet
+                    </div>
+                </div>
+
+                <div class="info">
+                    <a class="nav-link d-inline" href=""><i data-id="appmanager" class="bi bi-x-diamond-fill icon"></i></a>
+                    <div class="tooltip no-wrap">
+                        Apps
+                    </div>
+                </div>
+
+                <div class="info">
+                    <a class="nav-link d-inline" href=""><i data-id="systemsettings" class="bi bi-gear-fill icon"></i></a>
+                    <div class="tooltip no-wrap">
+                        Settings
+                    </div>
+                </div> 
+
+
+
+
+                <div style="width:20px;"></div>
+
+
+
+                <!-- planned -->
+                <div class="info">
+                    <a class="nav-link d-inline" href=""><i data-id="chat" class="bi bi-chat-fill icon"></i></a>
+                    <div class="tooltip no-wrap">
+                        Chat <!--Wink-->
+                    </div>
+                </div>
+
+                <div class="info">
+                    <a class="nav-link d-inline" href=""><i data-id="share" class="bi bi-share-fill icon"></i></a>
+                    <div class="tooltip no-wrap">
+                        Share <!--Untitled-->
+                    </div>
+                </div>
+
+
+
+
+                <div style="width:20px;"></div>
+
+
+
+                <!-- experimental -->
+                <!--
+                <div class="info">
+                    <a class="nav-link d-inline" href=""><i data-id="storyboard" class="bi bi-grid-3x3-gap-fill icon"></i></a>
+                    <div class="tooltip no-wrap">
+                        Storyboard
+                    </div>
+                </div> 
+                -->
+
+
+                <div style="width:20px;"></div>
+
+
+
+                <!-- debug -->
+                <div class="info">
+                    <a class="nav-link d-inline" href=""><i data-id="terminal" class="bi bi-terminal-fill icon"></i></a>
+                    <div class="tooltip no-wrap">
+                        Terminal
+                    </div>
+                </div>
+
+                <div class="info">
+                    <a class="nav-link d-inline" href=""><i data-id="console" class="bi bi-card-text icon"></i></a>
+                    <div class="tooltip no-wrap">
+                        Console
+                    </div>
+                </div> 
+
+                <div class="info">
+                    <a class="nav-link d-inline" href=""><i data-id="layoutinspector" class="bi bi-bar-chart-steps icon"></i></a>
+                    <div class="tooltip no-wrap">
+                        Layout Inspector
+                    </div>
+                </div> 
+
+                <div class="info">
+                    <a class="nav-link d-inline" href=""><i data-id="performancemonitor" class="bi bi-heart-pulse-fill icon"></i></a>
+                    <div class="tooltip no-wrap">
+                        Performance Monitor
+                    </div>
+                </div> 
+
+                <div class="info">
+                    <a class="nav-link d-inline" href=""><i data-id="gcmonitor" class="bi bi-basket-fill icon"></i></a>
+                    <div class="tooltip no-wrap">
+                        GC Monitor
+                    </div>
+                </div> 
+
+                <div class="info">
+                    <a class="nav-link d-inline" href=""><i data-id="networkmonitor" class="bi bi-router-fill icon"></i></a>
+                    <div class="tooltip no-wrap">
+                        Network Monitor
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </nav>
+</div>
