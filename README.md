@@ -3,19 +3,19 @@
 ## Introduction  
 **Socrates** is a virtual operating system designed to provide a secure, cross-platform, speech-friendly, and private digital ecosystem. Initiated in response to escalating privacy intrusions from governments and tech oligopolies, Socrates offers a comprehensive solution that transcends traditional privacy tools like incognito mode, providing a robust alternative for secure digital interaction.
 
-### Install Module Dependendcies
-
-For Unix users or Windows users using bash unix style terminals:
-**_Note: Ensure the `_.setup.sh` file is executable, run ```chmod +x _.setup.sh```_**
-Open your terminal and run ```./_.setup.sh```
-
-
 ## Installation  
 
 To get going quickly:
 
-OS X: Navigate to the root project directory, and run ```chmd +x _.command``` and then double click _.command (may not work if command is located within your user directory)
-Windows: Double click ```_.bat```. (recommend using OS X, as Windows support is not regularly tested/updated)
+#### Install Module Dependencies
+
+- Ensure the `_.setup.sh` file is executable, run ```chmod +x _.setup.sh```
+- Open your terminal and run ```./_.setup.sh```
+
+#### Compile and Run
+
+- (OS X): Navigate to the root project directory, and run ```chmd +x _.command``` and then double click ```_.command``` (may not work if command is located within your user directory)
+- (Windows): Double click ```_.bat```. (recommend using OS X, as Windows support is not regularly tested/updated)
 
 Access the web version here: http://localhost:800/assistant
 
