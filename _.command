@@ -2,7 +2,7 @@
 
 # Get the current directory
 current_dir="$(dirname "$0")"
-
+echo $current_dir
 # AppleScript to open a new terminal window, run the command in the current directory, and then start a new Zsh shell
 
 # WEB - run pages and dev to run the http server, compile, and watch
